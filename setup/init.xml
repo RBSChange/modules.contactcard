@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
+	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
+	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
+
+	<systemfolder module="list" relatedmodule="contactcard">
+	
+		<editablelist listid="modules_contactcard/title" order="false"
+			description="Civilités pour le module contactcard"
+			label="Civilités pour le module contactcard">	
+			<item label="M." />
+			<item label="Mlle" />
+			<item label="Mme" />
+		</editablelist>	
+		
+		<dynamiclist listid="modules_contactcard/languages"
+			label="Liste des langues disponibles" description="Langues disponible pour la réception des messages de notification">
+		</dynamiclist>
+	</systemfolder>
+	
+	<systemfolder module="form" relatedmodule="contactcard">
+		<form formid="modules_contactcard/contact"
+			  label="envoyer un e-mail au contact" submitButton="Envoyer" 
+			  confirmMessage="votre message a été envoyé"
+			  markup="default" useBackLink="true" messageSendingType="2" useCaptcha="false">	
+			
+			<fieldtext fieldName="lastname" label="Nom" 
+				required="true" multiline="false" cols="50" maxlength="255" 
+				validators="blank:false;maxSize:255"/>
+							
+			<fieldtext fieldName="firstname" label="Prénom"
+				required="true" multiline="false" cols="50" maxlength="255" 
+				validators="blank:false;maxSize:255"/>
+				
+			<fieldtext fieldName="email" label="Adresse e-mail"
+				required="true" multiline="false" cols="50" maxlength="255"
+				validators="email:true;blank:false;maxSize:255" />
+				
+			<fieldtext fieldName="object" label="Objet" 
+				required="true" multiline="false" cols="50" maxlength="255" 
+				validators="blank:false;maxSize:255"/>
+				
+			<fieldtext fieldName="message" label="Message" 
+				required="true" multiline="true" cols="50" rows="10" maxlength="10000"
+				validators="blank:false;maxSize:10000" />						
+		</form>	
+	</systemfolder>
+</script>

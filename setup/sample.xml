@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/contactcard/persistentdocument/import/contactcard_binding.xml" />
+		
+	<rootfolder module="media">
+		<folder label="Exemple Fiche contact">
+			<media
+				path="modules/contactcard/setup/sample/HAUSWALD Eric.jpg"
+				label="HAUSWALD Eric" id="photo1" />
+			<media
+				path="modules/contactcard/setup/sample/PORT Gaël.jpg"
+				label="PORT Gaël" id="photo2" />
+			<media
+				path="modules/contactcard/setup/sample/SIMON Alexandre.jpg"
+				label="SIMON Alexandre" id="photo3" />
+			<media
+				path="modules/contactcard/setup/sample/STAUFFER Franck.jpg"
+				label="STAUFFER Franck" id="photo4" />	
+			
+		</folder>
+	</rootfolder>
+
+	<website byTag="default_modules_website_default-website" template="tplTwo">
+		<topic label="Outils" byLabel="Outils">
+			<page label="Contact" navigationVisibility="hidden" indexingstatus="false" >
+				<tag name="contextual_website_website_modules_contactcard_page-detail" />
+				<changecontent for="content-block">
+					<changeblock type="modules_contactcard_detail" />
+				</changecontent>
+			</page>
+
+			<page label="Envoyer un mail à ce contact" navigationVisibility="hidden" indexingstatus="false" >
+				<tag name="contextual_website_website_modules_contactcard_page-contact" />
+				<changecontent for="content-block">
+					<changeblock type="richtext">
+						<![CDATA[<h2 class="heading-two">Mettre ici le formulaire de contact</h2>]]>
+					</changeblock>
+				</changecontent>
+			</page>
+		</topic>
+	</website>
+	
+	<rootfolder module="contactcard">
+		<folder label="Exemples" byLabel="Exemples">
+			<contact name="RBS"
+				 titlestr="M."
+				 firstname="Eric"
+				 lastname="HAUSWALD"
+				 function="Concepteur dev. web"
+				 photo-refid="photo1"
+				 post="1268"
+				 mails="eric.hauswald@rbs.fr"
+				 
+				 communicationlanguage="fr"
+				 phone="+33 (0)3 88 764 764"
+				 fax="+33 (0)3 88 764 765"
+				 address1="Aéroparc 1"
+				 address2="11 rue Icare"
+				 zipcode="67836"
+				 city="Strasbourg – Entzheim"
+				 country="france"
+				 
+				 indexingstatus="false"
+			/>
+			<contact name="RBS"
+				 titlestr="M."			
+				 firstname="Gaël"
+				 lastname="PORT"
+				 function="Développeur WEB"
+				 photo-refid="photo2"
+				 post="1247"
+				 mails="gael.port@rbs.fr"
+				 
+				 communicationlanguage="fr"
+				 phone="+33 (0)3 88 764 764"
+				 fax="+33 (0)3 88 764 765"
+				 address1="Aéroparc 1"
+				 address2="11 rue Icare"
+				 zipcode="67836"
+				 city="Strasbourg – Entzheim"
+				 country="france"
+				 
+				 indexingstatus="false"
+			/>
+			<contact name="RBS"
+				 titlestr="M."
+				 firstname="Alexandre"
+				 lastname="SIMON"
+				 function="Ingénieur Développement"
+				 photo-refid="photo3"
+				 post="1305"
+				 mails="alexandre.simon@rbs.fr"
+				 
+				 communicationlanguage="fr"
+				 phone="+33 (0)3 88 764 764"
+				 fax="+33 (0)3 88 764 765"
+				 address1="Aéroparc 1"
+				 address2="11 rue Icare"
+				 zipcode="67836"
+				 city="Strasbourg – Entzheim"
+				 country="france"
+				 
+				 indexingstatus="false"
+			/>
+			<contact name="RBS"
+				 titlestr="M."			
+				 firstname="Franck"
+				 lastname="STAUFFER"
+				 function="Développeur"
+				 photo-refid="photo4"
+				 post="1280"
+				 mails="franck.stauffer@rbs.fr"
+				 
+				 communicationlanguage="fr"
+				 phone="+33 (0)3 88 764 764"
+				 fax="+33 (0)3 88 764 765"
+				 address1="Aéroparc 1"
+				 address2="11 rue Icare"
+				 zipcode="67836"
+				 city="Strasbourg – Entzheim"
+				 country="france"
+				 
+				 indexingstatus="false"
+			/>
+		</folder>
+	</rootfolder>
+</script>

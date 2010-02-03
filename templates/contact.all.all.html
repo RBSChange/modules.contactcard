@@ -1,0 +1,51 @@
+<ol class="vcard">
+	<li class="contact-not-published" tal:condition="contactNotPublished" i18n:translate="&modules.contactcard.bo.general.ContactNotPublished;"/>
+	<li class="float-right" tal:condition="photo">
+	  <img tal:condition="contact/getLastname" class="fn" change:media="document contact/getPhoto; format 'modules.contactcard.frontoffice/detailvisual'; alt contact/getLastname"/>
+	  <img tal:condition="not: contact/getLastname" class="fn" change:media="document contact/getPhoto; format 'modules.contactcard.frontoffice/detailvisual'; alt contact/getName"/>
+	</li>
+	<li>
+		<h4 tal:condition="contact/getLastname" class="fn">
+			<strong><span tal:condition="title" class="honorific-prefix" tal:content="title"/> <span class="given-name" tal:content="contact/getFirstname"/> <span class="family-name" tal:content="contact/getLastname"/></strong>
+		</h4>
+		<h4 tal:condition="not: contact/getLastname" class="org fn" tal:content="contact/getName"/>	
+	</li>
+	<li tal:condition="php: contact.getName() && contact.getLastname()">
+		<strong i18n:translate="&modules.contactcard.frontoffice.OfficeLabel;"/>
+		<span class="org" tal:content="contact/getName"/>
+	</li>
+	<li tal:condition="contact/getFunction">
+		<strong i18n:translate="&modules.contactcard.frontoffice.FunctionLabel;"/>
+		<span class="title" tal:content="contact/getFunction"/>
+	</li>
+	<li tal:condition="contact/getPhone" class="tel">
+		<strong i18n:translate="&modules.contactcard.frontoffice.PhoneLabel;"/>
+		<span class="type display-none">work</span>
+		<span class="value" tal:content="contact/getPhone"/>
+	</li>
+	<li tal:condition="contact/getPost">
+		<strong i18n:translate="&modules.contactcard.frontoffice.PostLabel;"/>
+		<span tal:replace="contact/getPost"/>
+	</li>
+	<li tal:condition="contact/getFax" class="tel">
+		<strong i18n:translate="&modules.contactcard.frontoffice.FaxLabel;"/>
+		<span class="type display-none">fax</span>
+		<span class="value" tal:content="contact/getFax"/>
+	</li>
+	<li tal:condition="adr" class="address adr">
+		<strong i18n:translate="&modules.contactcard.frontoffice.AddressLabel;"/>
+		<ul>
+		<li tal:condition="address" class="street-address" tal:content="address"/>
+		<li tal:condition="contact/getZipcode" class="display-inline postal-code" tal:content="contact/getZipcode"/>
+		<li tal:condition="contact/getCity" class="display-inline locality" tal:content="contact/getCity"/>
+		<li tal:condition="contact/getCountry" class="country-name" tal:content="contact/getCountry"/>
+		</ul>
+	</li>
+	<li tal:condition="contactform">
+		<strong i18n:translate="&modules.contactcard.frontoffice.ContactLabel;"/>
+		<span>
+			<a change:link="document contactform; formParam[receiverIds] contact/getId" class="link email" i18n:translate="&modules.contactcard.frontoffice.Contactme;"/> 
+			<span tal:condition="contactformPageNotPublished" i18n:translate="&modules.contactcard.bo.general.ContactformPageNotPublished;" class="contactformPageNotPublished"/>
+		</span>
+	</li>
+</ol>

@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<blocks>
+	<block type="modules_contactcard_detail" display="" icon="contactcard" label="&amp;modules.contactcard.bo.blocks.Detail;" />
+</blocks>

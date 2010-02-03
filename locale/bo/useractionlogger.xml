@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization><entity id="update-contact"><locale lang="fr">update.contact {lang} {documentlabel}</locale></entity><entity id="log-update-contact"><locale lang="fr">log-update-contact</locale></entity></localization>

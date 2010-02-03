@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <entity id="create-contact">
+    <locale lang="fr">créer une fiche contact</locale>
+    <locale lang="en">create a contact card</locale>
+    <locale lang="de">Neue Konkaktkarte</locale>
+  </entity>
+  <entity id="create_">
+    <locale lang="fr">créer...</locale>
+    <locale lang="en">create...</locale>
+  </entity>
+</localization>

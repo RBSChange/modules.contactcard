@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localization>
+	<entity id="fieldsgroup.postal">
+		<locale lang="fr">adresse postale</locale>
+		<locale lang="en">postal address</locale>
+	</entity>
+	<entity id="fieldsgroup.phone">
+		<locale lang="fr">coordonnées téléphoniques</locale>
+		<locale lang="en">phone coordinates</locale>
+	</entity>
+</localization>
