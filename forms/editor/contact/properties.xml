@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <panel>
-	<section labeli18n="modules.uixul.bo.doceditor.fieldsgroup.Title" class="toggle" image="{HttpHost}/icons/small/contactcard.png">
+	<section labeli18n="modules.uixul.bo.doceditor.fieldsgroup.Title" class="toggle" image="{IconsBase}/small/contactcard.png">
 		<field name="title" />
 		<field name="lastname" />
 		<field name="firstname" />
@@ -11,14 +11,14 @@
 		<field name="mails" />
 		<field name="indexingstatus" />
 	</section>
-	<section labeli18n="modules.contactcard.bo.doceditor.fieldsgroup.Postal" class="toggle" image="{HttpHost}/icons/small/postage-stamp.png" hidden="true">
+	<section labeli18n="modules.contactcard.bo.doceditor.fieldsgroup.Postal" class="toggle" image="{IconsBase}/small/postage-stamp.png" hidden="true">
 		<field name="address1" />
 		<field name="address2" />
 		<field name="zipcode" />
 		<field name="city" />
 		<field name="country" />
 	</section>
-	<section labeli18n="modules.contactcard.bo.doceditor.fieldsgroup.Phone" class="toggle" image="{HttpHost}/icons/small/phone.png" hidden="true">
+	<section labeli18n="modules.contactcard.bo.doceditor.fieldsgroup.Phone" class="toggle" image="{IconsBase}/small/phone.png" hidden="true">
 		<field name="phone" />
 		<field name="post" />
 		<field name="fax" />

@@ -1,3 +1,7 @@
 treechildren::-moz-tree-image(modules_contactcard_contact){
-	list-style-image: url(/icons/small/contactcard.png) ;
+	list-style-image: url(/changeicons/small/contactcard.png) ;
+}
+
+treechildren::-moz-tree-image(modules_contactcard_webcontact){
+	list-style-image: url(/changeicons/small/contactcard.png);
 }
