@@ -106,11 +106,12 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 	/**
 	 * @param contactcard_persistentdocument_contact $document
 	 * @param string $forModuleName
+	 * @param array $allowedSections
 	 * @return array
 	 */
-	public function getResume($document, $forModuleName)
+	public function getResume($document, $forModuleName, $allowedSections = null)
 	{
-		$data = parent::getResume($document, $forModuleName);
+		$data = parent::getResume($document, $forModuleName, $allowedSections);
 		$data['properties']['emails'] = implode(", " , $document->getEmailAddresses());
 		return $data;
 	}
