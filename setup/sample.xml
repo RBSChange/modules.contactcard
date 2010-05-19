@@ -5,20 +5,10 @@
 	<binding fileName="modules/contactcard/persistentdocument/import/contactcard_binding.xml" />
 		
 	<rootfolder module="media">
-		<folder label="Exemple Fiche contact">
+		<folder label="Exemple Fiches contacts">
 			<media
-				path="modules/contactcard/setup/sample/HAUSWALD Eric.jpg"
-				label="HAUSWALD Eric" id="photo1" />
-			<media
-				path="modules/contactcard/setup/sample/PORT Gaël.jpg"
-				label="PORT Gaël" id="photo2" />
-			<media
-				path="modules/contactcard/setup/sample/SIMON Alexandre.jpg"
-				label="SIMON Alexandre" id="photo3" />
-			<media
-				path="modules/contactcard/setup/sample/STAUFFER Franck.jpg"
-				label="STAUFFER Franck" id="photo4" />	
-			
+				path="modules/contactcard/setup/sample/photo.png"
+				label="Photo non disponible" id="photo" />
 		</folder>
 	</rootfolder>
 
@@ -46,72 +36,12 @@
 		<folder label="Exemples" byLabel="Exemples">
 			<contact name="RBS"
 				 titlestr="M."
-				 firstname="Eric"
-				 lastname="HAUSWALD"
-				 function="Concepteur dev. web"
-				 photo-refid="photo1"
-				 post="1268"
-				 mails="eric.hauswald@rbs.fr"
-				 
-				 communicationlanguage="fr"
-				 phone="+33 (0)3 88 764 764"
-				 fax="+33 (0)3 88 764 765"
-				 address1="Aéroparc 1"
-				 address2="11 rue Icare"
-				 zipcode="67836"
-				 city="Strasbourg – Entzheim"
-				 country="france"
-				 
-				 indexingstatus="false"
-			/>
-			<contact name="RBS"
-				 titlestr="M."			
-				 firstname="Gaël"
-				 lastname="PORT"
-				 function="Développeur WEB"
-				 photo-refid="photo2"
-				 post="1247"
-				 mails="gael.port@rbs.fr"
-				 
-				 communicationlanguage="fr"
-				 phone="+33 (0)3 88 764 764"
-				 fax="+33 (0)3 88 764 765"
-				 address1="Aéroparc 1"
-				 address2="11 rue Icare"
-				 zipcode="67836"
-				 city="Strasbourg – Entzheim"
-				 country="france"
-				 
-				 indexingstatus="false"
-			/>
-			<contact name="RBS"
-				 titlestr="M."
-				 firstname="Alexandre"
-				 lastname="SIMON"
-				 function="Ingénieur Développement"
-				 photo-refid="photo3"
-				 post="1305"
-				 mails="alexandre.simon@rbs.fr"
-				 
-				 communicationlanguage="fr"
-				 phone="+33 (0)3 88 764 764"
-				 fax="+33 (0)3 88 764 765"
-				 address1="Aéroparc 1"
-				 address2="11 rue Icare"
-				 zipcode="67836"
-				 city="Strasbourg – Entzheim"
-				 country="france"
-				 
-				 indexingstatus="false"
-			/>
-			<contact name="RBS"
-				 titlestr="M."			
-				 firstname="Franck"
-				 lastname="STAUFFER"
-				 function="Développeur"
-				 photo-refid="photo4"
-				 post="1280"
-				 mails="franck.stauffer@rbs.fr"
+				 firstname="RBS"
+				 lastname="Change"
+				 function="CMS E-Commerce"
+				 photo-refid="photo"
+				 post=""
+				 mails="noreply@rbschange.fr"
 				 
 				 communicationlanguage="fr"
 				 phone="+33 (0)3 88 764 764"
