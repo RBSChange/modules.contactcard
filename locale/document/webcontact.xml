@@ -8,8 +8,4 @@
 		<locale lang="fr">libellé</locale>
 		<locale lang="de">Name</locale>
 	</entity>
-	<entity id="label-help">
-		<locale lang="fr">libellé</locale>
-		<locale lang="de">Name</locale>
-	</entity>
 </localization>

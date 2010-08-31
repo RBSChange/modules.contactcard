@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel>
+	<section labeli18n="modules.uixul.bo.doceditor.fieldsgroup.Title">
+		<field name="name" />
+		<field name="function" hidehelp="true" />
+		<field name="phone" hidehelp="true" />
+		<field name="post" />
+		<field name="fax" hidehelp="true" />
+	</section>
+</panel>

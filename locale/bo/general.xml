@@ -1,100 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <localization>
-<!--
-#####################################################################
-#                                                                   #
-#                       Backoffice General                          #
-#                                                                   #
-#####################################################################
--->
-  <entity id="module-name">
-    <locale lang="fr">fiches contact</locale>
-    <locale lang="en">contact cards</locale>
-    <locale lang="de">Kontaktkarten</locale>
-  </entity>
-  <entity id="tree-root-name">
-    <locale lang="fr">fiches contact</locale>
-    <locale lang="en">contact cards</locale>
-    <locale lang="de">Kontaktkarten</locale>
-  </entity>
-  <entity id="system-folder-name">
-    <locale lang="fr">fiches contact</locale>
-    <locale lang="en">contact cards</locale>
-    <locale lang="de">Kontaktkarten</locale>
-  </entity>
-  <entity id="list.label">
-    <locale lang="fr">civilités pour le module fiches contact</locale>
-    <locale lang="en">title for contact cards module</locale>
-    <locale lang="de">Anreden für Kontaktkartenmodul</locale>
-  </entity>
-  <entity id="list.desc">
-    <locale lang="fr">civilités pour le module contact</locale>
-    <locale lang="en">title for contact module</locale>
-    <locale lang="de">Anreden für Kontaktmodul</locale>
-  </entity>
-  <entity id="list.mister">
-    <locale lang="fr">m.</locale>
-    <locale lang="en">mr.</locale>
-    <locale lang="de">Herr</locale>
-  </entity>
-  <entity id="list.miss">
-    <locale lang="fr">mlle</locale>
-    <locale lang="en">miss</locale>
-    <locale lang="de">Fräulein</locale>
-  </entity>
-  <entity id="list.madam">
-    <locale lang="fr">mme</locale>
-    <locale lang="en">mrs</locale>
-    <locale lang="de">Frau</locale>
-  </entity>
-  <entity id="tab.general">
-    <locale lang="fr">propriétés principales</locale>
-    <locale lang="en">main data</locale>
-    <locale lang="de">Haupteigenschaften</locale>
-  </entity>
-  <entity id="tab.address">
-    <locale lang="fr">adresse</locale>
-    <locale lang="en">address</locale>
-    <locale lang="de">Adresse</locale>
-  </entity>
-  <entity id="tab.indexing">
-    <locale lang="fr">indexation</locale>
-    <locale lang="en">indexing</locale>
-    <locale lang="de">Indexierung</locale>
-  </entity>
-  <entity id="contactNotPublished">
-    <locale lang="fr">ce contact n'est pas en statut publié, il ne sera pas affiché sur le site</locale>
-    <locale lang="en">this contact is not in published status, it won't be displayed online</locale>
-    <locale lang="de">Dieser Kontakt ist nicht in Veröffentlichtstatus, er wird nicht online angezeigt werden</locale>
-  </entity>
-  <entity id="contactformPageNotPublished">
-    <locale lang="fr">ce lien pointe vers une page qui n'est pas publiée, il ne sera pas affiché sur le site</locale>
-    <locale lang="en">this link goes to a not published page, it won't be displayed online</locale>
-    <locale lang="de">Dieser Link leitet zu einer nicht veröffentlichten Seite, er wird nicht online angezeigt werden</locale>
-  </entity>
-  <entity id="defaultlabel">
-    <locale lang="fr">fiche contact</locale>
-    <locale lang="en">contact card</locale>
-    <locale lang="de">Kontaktkarte</locale>
-  </entity>
-  <entity id="form.contact.label">
-    <locale lang="fr">envoyer un e-mail au contact</locale>
-    <locale lang="en">send an email to the contact</locale>
-    <locale lang="de">Diesem Kontakt eine E-mail schicken</locale>
-  </entity>
-  <entity id="form.contact.confirm-message">
-    <locale lang="fr">votre message a été envoyé</locale>
-    <locale lang="en">your message has been sent</locale>
-    <locale lang="de">Ihre E-mail wurde erfolgreich verschickt</locale>
-  </entity>
-  <entity id="tag.detail-page">
-    <locale lang="fr">page de détail</locale>
-    <locale lang="en">detail page</locale>
-    <locale lang="de">Detailseite</locale>
-  </entity>
-  <entity id="tag.contact-page">
-    <locale lang="fr">page du formulaire de contact</locale>
-    <locale lang="en">contact form page</locale>
-    <locale lang="de">Kontaktformularseite</locale>
-  </entity>
+	<entity id="module-name">
+		<locale lang="fr">fiches contact</locale>
+		<locale lang="en">contact cards</locale>
+		<locale lang="de">Kontaktkarten</locale>
+	</entity>
+	<entity id="tree-root-name">
+		<locale lang="fr">fiches contact</locale>
+		<locale lang="en">contact cards</locale>
+		<locale lang="de">Kontaktkarten</locale>
+	</entity>
+	<entity id="system-folder-name">
+		<locale lang="fr">fiches contact</locale>
+		<locale lang="en">contact cards</locale>
+		<locale lang="de">Kontaktkarten</locale>
+	</entity>
+	<entity id="list.label">
+		<locale lang="fr">civilités pour le module fiches contact</locale>
+		<locale lang="en">title for contact cards module</locale>
+		<locale lang="de">Anreden für Kontaktkartenmodul</locale>
+	</entity>
+	<entity id="list.desc">
+		<locale lang="fr">civilités pour le module contact</locale>
+		<locale lang="en">title for contact module</locale>
+		<locale lang="de">Anreden für Kontaktmodul</locale>
+	</entity>
+	<entity id="list.mister">
+		<locale lang="fr">m.</locale>
+		<locale lang="en">mr.</locale>
+		<locale lang="de">Herr</locale>
+	</entity>
+	<entity id="list.miss">
+		<locale lang="fr">mlle</locale>
+		<locale lang="en">miss</locale>
+		<locale lang="de">Fräulein</locale>
+	</entity>
+	<entity id="list.madam">
+		<locale lang="fr">mme</locale>
+		<locale lang="en">mrs</locale>
+		<locale lang="de">Frau</locale>
+	</entity>
+	<entity id="tab.general">
+		<locale lang="fr">propriétés principales</locale>
+		<locale lang="en">main data</locale>
+		<locale lang="de">Haupteigenschaften</locale>
+	</entity>
+	<entity id="tab.address">
+		<locale lang="fr">adresse</locale>
+		<locale lang="en">address</locale>
+		<locale lang="de">Adresse</locale>
+	</entity>
+	<entity id="tab.indexing">
+		<locale lang="fr">indexation</locale>
+		<locale lang="en">indexing</locale>
+		<locale lang="de">Indexierung</locale>
+	</entity>
+	<entity id="contactNotPublished">
+		<locale lang="fr">ce contact n'est pas en statut publié, il ne sera pas affiché sur le site</locale>
+		<locale lang="en">this contact is not in published status, it won't be displayed online</locale>
+		<locale lang="de">Dieser Kontakt ist nicht in Veröffentlichtstatus, er wird nicht online angezeigt werden</locale>
+	</entity>
+	<entity id="contactformPageNotPublished">
+		<locale lang="fr">ce lien pointe vers une page qui n'est pas publiée, il ne sera pas affiché sur le site</locale>
+		<locale lang="en">this link goes to a not published page, it won't be displayed online</locale>
+		<locale lang="de">Dieser Link leitet zu einer nicht veröffentlichten Seite, er wird nicht online angezeigt werden</locale>
+	</entity>
+	<entity id="defaultlabel">
+		<locale lang="fr">fiche contact</locale>
+		<locale lang="en">contact card</locale>
+		<locale lang="de">Kontaktkarte</locale>
+	</entity>
+	<entity id="form.contact.label">
+		<locale lang="fr">envoyer un e-mail au contact</locale>
+		<locale lang="en">send an email to the contact</locale>
+		<locale lang="de">Diesem Kontakt eine E-mail schicken</locale>
+	</entity>
+	<entity id="form.contact.confirm-message">
+		<locale lang="fr">votre message a été envoyé</locale>
+		<locale lang="en">your message has been sent</locale>
+		<locale lang="de">Ihre E-mail wurde erfolgreich verschickt</locale>
+	</entity>
+	<entity id="tag.detail-page">
+		<locale lang="fr">page de détail</locale>
+		<locale lang="en">detail page</locale>
+		<locale lang="de">Detailseite</locale>
+	</entity>
+	<entity id="tag.contact-page">
+		<locale lang="fr">page du formulaire de contact</locale>
+		<locale lang="en">contact form page</locale>
+		<locale lang="de">Kontaktformularseite</locale>
+	</entity>
 </localization>

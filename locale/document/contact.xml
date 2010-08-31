@@ -1,191 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <localization>
-  <entity id="document-name">
-    <locale lang="fr">fiche contact</locale>
-    <locale lang="de">Kontaktkarte</locale>
-  </entity>
-  <entity id="edition-form-title">
-    <locale lang="fr">édition d'une fiche contact</locale>
-    <locale lang="en">edit a contact card</locale>
-    <locale lang="de">Kontaktkarte bearbeiten</locale>
-  </entity>
-  <entity id="label">
-    <locale lang="fr">libellé</locale>
-    <locale lang="de">Name</locale>
-  </entity>
-  <entity id="label-help">
-    <locale lang="fr">nom de l'organisme, de la société ou du service</locale>
-    <locale lang="en">company or office name</locale>
-    <locale lang="de">Name der Organisation, der Firma oder des Dienstes</locale>
-  </entity>
-  <entity id="name">
-    <locale lang="fr">société</locale>
-    <locale lang="en">office</locale>
-    <locale lang="de">Firma</locale>
-  </entity>
-  <entity id="address1">
-    <locale lang="fr">adresse</locale>
-    <locale lang="en">address</locale>
-    <locale lang="de">Adresse</locale>
-  </entity>
-  <entity id="address1-help">
-    <locale lang="fr">adresse postale du contact</locale>
-    <locale lang="en">contact address</locale>
-    <locale lang="de">Postanschrift des Kontaktes</locale>
-  </entity>
-  <entity id="address2">
-    <locale lang="fr">complément d'adresse</locale>
-    <locale lang="en">complement of address</locale>
-    <locale lang="de">Adressezusatz</locale>
-  </entity>
-  <entity id="address2-help">
-    <locale lang="fr">complément de l'adresse postale du contact</locale>
-    <locale lang="en">complement of contact's address</locale>
-    <locale lang="de">Postanschriftzusatz des Kontaktes</locale>
-  </entity>
-  <entity id="zipcode">
-    <locale lang="fr">code postal</locale>
-    <locale lang="en">zipcode</locale>
-    <locale lang="de">PLZ</locale>
-  </entity>
-  <entity id="zipcode-help">
-    <locale lang="fr">code postal</locale>
-    <locale lang="en">zipcode</locale>
-    <locale lang="de">PLZ</locale>
-  </entity>
-  <entity id="city">
-    <locale lang="fr">ville</locale>
-    <locale lang="en">city</locale>
-    <locale lang="de">Stadt</locale>
-  </entity>
-  <entity id="city-help">
-    <locale lang="fr">ville</locale>
-    <locale lang="en">city</locale>
-    <locale lang="de">Stadt</locale>
-  </entity>
-  <entity id="country">
-    <locale lang="fr">pays</locale>
-    <locale lang="en">country</locale>
-    <locale lang="de">Land</locale>
-  </entity>
-  <entity id="country-help">
-    <locale lang="fr">pays</locale>
-    <locale lang="en">country</locale>
-    <locale lang="de">Land</locale>
-  </entity>
-  <entity id="title">
-    <locale lang="fr">civilité</locale>
-    <locale lang="en">title</locale>
-    <locale lang="de">Anrede</locale>
-  </entity>
-  <entity id="title-help">
-    <locale lang="fr">civilité</locale>
-    <locale lang="en">title</locale>
-    <locale lang="de">Anrede</locale>
-  </entity>
-  <entity id="name-help">
-    <locale lang="fr">nom et prénom</locale>
-    <locale lang="en">lastname and firstname</locale>
-    <locale lang="de">Nach- und Vorname</locale>
-  </entity>
-  <entity id="function">
-    <locale lang="fr">fonction</locale>
-    <locale lang="en">function</locale>
-    <locale lang="de">Funktion</locale>
-  </entity>
-  <entity id="function-help">
-    <locale lang="fr">fonction</locale>
-    <locale lang="en">function</locale>
-    <locale lang="de">Funktion</locale>
-  </entity>
-  <entity id="photo">
-    <locale lang="fr">photo</locale>
-    <locale lang="en">photo</locale>
-    <locale lang="de">Bild</locale>
-  </entity>
-  <entity id="photo-help">
-    <locale lang="fr">photo</locale>
-    <locale lang="en">photo</locale>
-    <locale lang="de">Bild</locale>
-  </entity>
-  <entity id="phone">
-    <locale lang="fr">téléphone</locale>
-    <locale lang="en">phone</locale>
-    <locale lang="de">Telefon</locale>
-  </entity>
-  <entity id="phone-help">
-    <locale lang="fr">téléphone</locale>
-    <locale lang="en">phone</locale>
-    <locale lang="de">Telefon</locale>
-  </entity>
-  <entity id="post">
-    <locale lang="fr">poste</locale>
-    <locale lang="en">post</locale>
-    <locale lang="de">Durchwahl</locale>
-  </entity>
-  <entity id="post-help">
-    <locale lang="fr">numéro de poste téléphonique</locale>
-    <locale lang="en">post phone number</locale>
-    <locale lang="de">Telefondurchwahl</locale>
-  </entity>
-  <entity id="fax">
-    <locale lang="fr">fax</locale>
-    <locale lang="en">fax</locale>
-    <locale lang="de">Fax</locale>
-  </entity>
-  <entity id="fax-help">
-    <locale lang="fr">fax</locale>
-    <locale lang="en">fax</locale>
-    <locale lang="de">Fax</locale>
-  </entity>
-  <entity id="mails">
-    <locale lang="fr">emails</locale>
-    <locale lang="en">mails</locale>
-    <locale lang="de">E-mails</locale>
-  </entity>
-  <entity id="mails-help">
-    <locale lang="fr">les adresses e-mail doivent être séparées par une virgule (,)</locale>
-    <locale lang="en">e-mail addresses should be separated with a comma (,)</locale>
-    <locale lang="de">E-mailadressen müssen durch Kommas getrennt werden (,)</locale>
-  </entity>
-  <entity id="lastname">
-    <locale lang="fr">nom</locale>
-    <locale lang="en">lastname</locale>
-    <locale lang="de">Nachname</locale>
-  </entity>
-  <entity id="lastname-help">
-    <locale lang="fr">nom du contact</locale>
-    <locale lang="en">contact lastname</locale>
-    <locale lang="de">Nachname des Kontaktes</locale>
-  </entity>
-  <entity id="firstname">
-    <locale lang="fr">prénom</locale>
-    <locale lang="en">firstname</locale>
-    <locale lang="de">Vorname</locale>
-  </entity>
-  <entity id="firstname-help">
-    <locale lang="fr">prénom du contact</locale>
-    <locale lang="en">contact firstname</locale>
-    <locale lang="de">Vorname des Kontaktes</locale>
-  </entity>
-  <entity id="communicationlanguage">
-    <locale lang="fr">langue de communication</locale>
-    <locale lang="en">language</locale>
-    <locale lang="de">Sprache</locale>
-  </entity>
-  <entity id="communicationlanguage-help">
-    <locale lang="fr">langue de communication</locale>
-    <locale lang="en">language</locale>
-    <locale lang="de">Sprache</locale>
-  </entity>
-  <entity id="indexingstatus">
-    <locale lang="fr">indexation</locale>
-    <locale lang="en">indexation</locale>
-    <locale lang="de">Indexierung</locale>
-  </entity>
-  <entity id="indexingstatus-help">
-    <locale lang="fr">aide indexation</locale>
-    <locale lang="en">indexation</locale>
-    <locale lang="de">Indexierung</locale>
-  </entity>
+	<entity id="document-name">
+		<locale lang="fr">fiche contact</locale>
+		<locale lang="de">Kontaktkarte</locale>
+	</entity>
+	<entity id="label">
+		<locale lang="fr">libellé</locale>
+		<locale lang="de">Name</locale>
+	</entity>
+	<entity id="label-help">
+		<locale lang="fr">nom de l'organisme, de la société ou du service</locale>
+		<locale lang="en">company or office name</locale>
+		<locale lang="de">Name der Organisation, der Firma oder des Dienstes</locale>
+	</entity>
+	<entity id="name">
+		<locale lang="fr">société</locale>
+		<locale lang="en">office</locale>
+		<locale lang="de">Firma</locale>
+	</entity>
+	<entity id="name-help">
+		<locale lang="fr">nom et prénom</locale>
+		<locale lang="en">lastname and firstname</locale>
+		<locale lang="de">Nach- und Vorname</locale>
+	</entity>
+	<entity id="address1">
+		<locale lang="fr">adresse</locale>
+		<locale lang="en">address</locale>
+		<locale lang="de">Adresse</locale>
+	</entity>
+	<entity id="address1-help">
+		<locale lang="fr">adresse postale du contact</locale>
+		<locale lang="en">contact address</locale>
+		<locale lang="de">Postanschrift des Kontaktes</locale>
+	</entity>
+	<entity id="address2">
+		<locale lang="fr">complément d'adresse</locale>
+		<locale lang="en">complement of address</locale>
+		<locale lang="de">Adressezusatz</locale>
+	</entity>
+	<entity id="address2-help">
+		<locale lang="fr">complément de l'adresse postale du contact</locale>
+		<locale lang="en">complement of contact's address</locale>
+		<locale lang="de">Postanschriftzusatz des Kontaktes</locale>
+	</entity>
+	<entity id="zipcode">
+		<locale lang="fr">code postal</locale>
+		<locale lang="en">zipcode</locale>
+		<locale lang="de">PLZ</locale>
+	</entity>
+	<entity id="city">
+		<locale lang="fr">ville</locale>
+		<locale lang="en">city</locale>
+		<locale lang="de">Stadt</locale>
+	</entity>
+	<entity id="country">
+		<locale lang="fr">pays</locale>
+		<locale lang="en">country</locale>
+		<locale lang="de">Land</locale>
+	</entity>
+	<entity id="title">
+		<locale lang="fr">civilité</locale>
+		<locale lang="en">title</locale>
+		<locale lang="de">Anrede</locale>
+	</entity>
+	<entity id="function">
+		<locale lang="fr">fonction</locale>
+		<locale lang="en">function</locale>
+		<locale lang="de">Funktion</locale>
+	</entity>
+	<entity id="photo">
+		<locale lang="fr">photo</locale>
+		<locale lang="en">photo</locale>
+		<locale lang="de">Bild</locale>
+	</entity>
+	<entity id="phone">
+		<locale lang="fr">téléphone</locale>
+		<locale lang="en">phone</locale>
+		<locale lang="de">Telefon</locale>
+	</entity>
+	<entity id="post">
+		<locale lang="fr">poste</locale>
+		<locale lang="en">post</locale>
+		<locale lang="de">Durchwahl</locale>
+	</entity>
+	<entity id="post-help">
+		<locale lang="fr">numéro de poste téléphonique</locale>
+		<locale lang="en">post phone number</locale>
+		<locale lang="de">Telefondurchwahl</locale>
+	</entity>
+	<entity id="fax">
+		<locale lang="fr">fax</locale>
+		<locale lang="en">fax</locale>
+		<locale lang="de">Fax</locale>
+	</entity>
+	<entity id="mails">
+		<locale lang="fr">emails</locale>
+		<locale lang="en">mails</locale>
+		<locale lang="de">E-mails</locale>
+	</entity>
+	<entity id="mails-help">
+		<locale lang="fr">les adresses e-mail doivent être séparées par une virgule (,)</locale>
+		<locale lang="en">e-mail addresses should be separated with a comma (,)</locale>
+		<locale lang="de">E-mailadressen müssen durch Kommas getrennt werden (,)</locale>
+	</entity>
+	<entity id="lastname">
+		<locale lang="fr">nom</locale>
+		<locale lang="en">lastname</locale>
+		<locale lang="de">Nachname</locale>
+	</entity>
+	<entity id="firstname">
+		<locale lang="fr">prénom</locale>
+		<locale lang="en">firstname</locale>
+		<locale lang="de">Vorname</locale>
+	</entity>
+	<entity id="communicationlanguage">
+		<locale lang="fr">langue de communication</locale>
+		<locale lang="en">language</locale>
+		<locale lang="de">Sprache</locale>
+	</entity>
+	<entity id="indexingstatus">
+		<locale lang="fr">indexation</locale>
+		<locale lang="en">indexation</locale>
+		<locale lang="de">Indexierung</locale>
+	</entity>
 </localization>

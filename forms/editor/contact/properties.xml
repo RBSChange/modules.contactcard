@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <panel>
 	<section labeli18n="modules.uixul.bo.doceditor.fieldsgroup.Title" class="toggle" image="{IconsBase}/small/contactcard.png">
-		<field name="title" />
-		<field name="lastname" />
-		<field name="firstname" />
+		<field name="title" hidehelp="true" />
+		<field name="lastname" hidehelp="true" />
+		<field name="firstname" hidehelp="true" />
 		<field name="name" />
-		<field name="function" />
-		<field name="photo" />
-		<field name="communicationlanguage" />
+		<field name="function" hidehelp="true" />
+		<field name="photo" hidehelp="true" />
+		<field name="communicationlanguage" hidehelp="true" />
 		<field name="mails" />
-		<field name="indexingstatus" />
+		<field name="indexingstatus" hidehelp="true" />
 	</section>
 	<section labeli18n="modules.contactcard.bo.doceditor.fieldsgroup.Postal" class="toggle" image="{IconsBase}/small/postage-stamp.png" hidden="true">
 		<field name="address1" />
 		<field name="address2" />
-		<field name="zipcode" />
-		<field name="city" />
-		<field name="country" />
+		<field name="zipcode" hidehelp="true" />
+		<field name="city" hidehelp="true" />
+		<field name="country" hidehelp="true" />
 	</section>
 	<section labeli18n="modules.contactcard.bo.doceditor.fieldsgroup.Phone" class="toggle" image="{IconsBase}/small/phone.png" hidden="true">
-		<field name="phone" />
+		<field name="phone" hidehelp="true" />
 		<field name="post" />
-		<field name="fax" />
+		<field name="fax" hidehelp="true" />
 	</section>
 </panel>

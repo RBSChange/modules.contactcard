@@ -44,7 +44,7 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 	 * @param Integer $parentNodeId
 	 * @return void
 	 */
-	protected function preSave($document, $parentNodeId = null)
+	protected function preSave($document, $parentNodeId)
 	{
 		$label = "";
 		if ($document->getFirstname() !== null)
