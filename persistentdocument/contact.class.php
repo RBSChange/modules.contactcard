@@ -5,10 +5,8 @@
  */
 class contactcard_persistentdocument_contact extends contactcard_persistentdocument_contactbase implements indexer_IndexableDocument, form_FormReceiver
 {
-	
 	/**
 	 * @see f_persistentdocument_PersistentDocumentImpl::getTreeNodeLabel()
-	 *
 	 * @return String
 	 */
 	function getTreeNodeLabel()
@@ -23,7 +21,6 @@ class contactcard_persistentdocument_contact extends contactcard_persistentdocum
 		}
 	}
 	
-
 	/**
 	 * Get the indexable document
 	 *
@@ -37,14 +34,11 @@ class contactcard_persistentdocument_contact extends contactcard_persistentdocum
 		}
 		
 		$indexedDoc = new indexer_IndexedDocument();
-		// TODO : set the different properties you want in you indexedDocument :
-		// - please verify that id, documentModel, label and lang are correct according your requirements
-		// - please set text value.
 		$indexedDoc->setId($this->getId());
 		$indexedDoc->setDocumentModel('modules_contactcard/contact');
 		$indexedDoc->setLabel($this->getLabel());
 		$indexedDoc->setLang(RequestContext::getInstance()->getLang());
-		$indexedDoc->setText($this->getAddress1() . " " . $this->getAddress2() . " " . $this->getZipcode() . " " . $this->getCity() . " " . $this->getCountry() . " " . $this->getLastname() . " " . $this->getFirstname() . " " . $this->getFunction() . " " . $this->getPhone() . " " . $this->getPost() . " " . $this->getFax()); // TODO : please fill text property
+		$indexedDoc->setText($this->getAddress1() . " " . $this->getAddress2() . " " . $this->getZipcode() . " " . $this->getCity() . " " . $this->getCountry() . " " . $this->getLastname() . " " . $this->getFirstname() . " " . $this->getFunction() . " " . $this->getPhone() . " " . $this->getPost() . " " . $this->getFax());
 		return $indexedDoc;
 	}
 	
