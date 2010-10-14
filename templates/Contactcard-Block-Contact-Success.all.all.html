@@ -16,7 +16,7 @@
 		</h4>
 		<h4 tal:condition="not: contact/getLastname" class="org fn">${contact/getNameAsHtml}</h4>	
 	</li>
-	<li tal:condition="configuration/getShowCompanyInfos">
+	<tal:block tal:condition="configuration/getShowCompanyInfos">
 		<li tal:condition="php: contact.getName() && contact.getLastname()">
 			<strong change:translate="modules.contactcard.frontoffice.OfficeLabel"></strong>
 			<span class="org">${contact/getNameAsHtml}</span>
@@ -25,8 +25,8 @@
 			<strong change:translate="modules.contactcard.frontoffice.FunctionLabel"></strong>
 			<span class="title">${contact/getFunctionAsHtml}</span>
 		</li>
-	</li>	
-	<li tal:condition="configuration/getShowTelephoneNumber">
+	</tal:block>	
+	<tal:block tal:condition="configuration/getShowTelephoneNumber">
 		<li tal:condition="contact/getPhone" class="tel">
 			<strong change:translate="modules.contactcard.frontoffice.PhoneLabel"></strong>
 			<span class="type display-none">work</span>
@@ -41,8 +41,8 @@
 			<span class="type display-none">fax</span>
 			<span class="value">${contact/getFaxAsHtml}</span>
 		</li>
-	</li>
-	<li tal:condition="configuration/getShowAddress">
+	</tal:block>
+	<tal:block tal:condition="configuration/getShowAddress">
 		<li tal:condition="contact/hasAddressInformations" class="address adr">
 			<strong change:translate="modules.contactcard.frontoffice.AddressLabel"></strong>
 			<ul>
@@ -58,7 +58,7 @@
 				<li tal:condition="contact/getCountry" class="country-name" tal:content="contact/getCountryAsHtml"/>
 			</ul>
 		</li>
-	</li>
+	</tal:block>
 	<li tal:condition="configuration/getShowContactpageLink">
 		<strong change:translate="modules.contactcard.frontoffice.ContactLabel"></strong>
 		<span>
