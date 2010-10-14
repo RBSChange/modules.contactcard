@@ -1,131 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
 <localization>
-  <entity id="detail">
-    <locale lang="fr">détail d'une fiche contact</locale>
-  </entity>
-  <entity id="contact.title">
-    <locale lang="fr">Détail d'une fiche contact</locale>
-    <locale lang="en">Contact's detail</locale>
-  </entity>
-  <entity id="contact.showphoto">
-    <locale lang="fr">Afficher la photo</locale>
-    <locale lang="en">Show photo</locale>
-  </entity>
-    <entity id="contact.showphoto-help">
-    <locale lang="fr">Afficher la photo</locale>
-    <locale lang="en">Show photo</locale>
-  </entity>
-  <entity id="contact.showcompanyinfos">
-    <locale lang="fr">Afficher les informations sur la société</locale>
-    <locale lang="en">Show Company informations</locale>
-  </entity>
-  <entity id="contact.showcompanyinfos-help">
-    <locale lang="fr">Afficher les informations sur la société</locale>
-    <locale lang="en">Show Company informations</locale>
-  </entity>
-  <entity id="contact.showtelephonenumber">
-    <locale lang="fr">Afficher les coordonnées téléphoniques</locale>
-    <locale lang="en">Show telephone number</locale>
-  </entity>
-  <entity id="contact.showtelephonenumber-help">
-    <locale lang="fr">Afficher les coordonnées téléphoniques</locale>
-    <locale lang="en">Show telephone number</locale>
-  </entity>
-  <entity id="contact.showaddress">
-    <locale lang="fr">Afficher l'adresse</locale>
-    <locale lang="en">Show address</locale>
-  </entity>
-  <entity id="contact.showaddress-help">
-    <locale lang="fr">Afficher l'adresse</locale>
-    <locale lang="en">Show address</locale>
-  </entity>
-  <entity id="contact.showcontactpagelink">
-    <locale lang="fr">Afficher le lien vers le formulaire de contact</locale>
-    <locale lang="en">Show contact page link</locale>
-  </entity>
-   <entity id="contact.showcontactpagelink-help">
-    <locale lang="fr">Afficher le lien vers le formulaire de contact</locale>
-    <locale lang="en">Show contact page link</locale>
-  </entity>
-  <entity id="contactlist.title">
-    <locale lang="fr">Trombinoscope</locale>
-    <locale lang="en">Group photo</locale>
-  </entity>
-  <entity id="contactlist.title-help">
-    <locale lang="fr">Trombinoscope</locale>
-    <locale lang="en">Group photo</locale>
-  </entity>
-  <entity id="contactlist.showphoto">
-    <locale lang="fr">Afficher la photo</locale>
-    <locale lang="en">Show photo</locale>
-  </entity>
-  <entity id="contactlist.showphoto-help">
-    <locale lang="fr">Afficher la photo</locale>
-    <locale lang="en">Show photo</locale>
-  </entity>
-  <entity id="contactlist.showcompanyinfos">
-    <locale lang="fr">Afficher les informations sur la société</locale>
-    <locale lang="en">Show Company informations</locale>
-  </entity>
-  <entity id="contactlist.showcompanyinfos-help">
-    <locale lang="fr">Afficher les informations sur la société (Nom de la société et le poste qu'occupe le contact)</locale>
-    <locale lang="en">Show Company informations (Company name and contact's function)</locale>
-  </entity>
-  <entity id="contactlist.showtelephonenumber">
-    <locale lang="fr">Afficher les coordonnées téléphoniques</locale>
-    <locale lang="en">Show telephone number</locale>
-  </entity>
-  <entity id="contactlist.showtelephonenumber-help">
-    <locale lang="fr">Afficher les coordonnées téléphoniques</locale>
-    <locale lang="en">Show telephone number</locale>
-  </entity>
-  <entity id="contactlist.showaddress">
-    <locale lang="fr">Afficher l'adresse</locale>
-    <locale lang="en">Show address</locale>
-  </entity>
-    <entity id="contactlist.showaddress-help">
-    <locale lang="fr">Afficher l'adresse</locale>
-    <locale lang="en">Show address</locale>
-  </entity>
-  <entity id="contactlist.showcontactpagelink">
-    <locale lang="fr">Afficher le lien vers le formulaire de contact</locale>
-    <locale lang="en">Show contact page link</locale>
-  </entity>
-  <entity id="contactlist.showcontactpagelink-help">
-    <locale lang="fr">Afficher le lien vers le formulaire de contact</locale>
-    <locale lang="en">Show contact page link</locale>
-  </entity>
-  <entity id="contactlist.showfilters">
-    <locale lang="fr">Afficher les filtres</locale>
-    <locale lang="en">Show filters</locale>
-  </entity>
-  <entity id="contactlist.showfilters-help">
-    <locale lang="fr">Afficher les filtres</locale>
-    <locale lang="en">Show filters</locale>
-  </entity>
-  <entity id="contactlist.showcompanynamesfilter">
-    <locale lang="fr">Afficher le filtre par société</locale>
-    <locale lang="en">Show company filter</locale>
-  </entity>  
-  <entity id="contactlist.showcompanynamesfilter-help">
-    <locale lang="fr">Afficher le filtre par société</locale>
-    <locale lang="en">Show company filter</locale>
-  </entity> 
-  <entity id="contactlist.showfunctionsfilter">
-    <locale lang="fr">Afficher le filtre par fonction</locale>
-    <locale lang="en">Show function filter</locale>
-  </entity>
-  <entity id="contactlist.showfunctionsfilter-help">
-    <locale lang="fr">Afficher le filtre par fonction</locale>
-    <locale lang="en">Show function filter</locale>
-  </entity>
-  <entity id="contactlist.itemperpage">
-    <locale lang="fr">Contact par page</locale>
-    <locale lang="en">Contact per page</locale>
-  </entity>
-  <entity id="contactlist.itemperpage-help">
-    <locale lang="fr">Nombre de contact par page</locale>
-    <locale lang="en">Contacts per page</locale>
-  </entity>
-  
+	<entity id="detail">
+		<locale lang="fr">détail d'une fiche contact</locale>
+	</entity>
+	<entity id="contact.title">
+		<locale lang="fr">Détail d'une fiche contact</locale>
+		<locale lang="en">Contact's detail</locale>
+	</entity>
+	<entity id="contact.showphoto">
+		<locale lang="fr">Afficher la photo</locale>
+		<locale lang="en">Show photo</locale>
+	</entity>
+	<entity id="contact.showphoto-help">
+		<locale lang="fr">Afficher la photo</locale>
+		<locale lang="en">Show photo</locale>
+	</entity>
+	<entity id="contact.showcompanyinfos">
+		<locale lang="fr">Afficher les informations sur la société</locale>
+		<locale lang="en">Show Company informations</locale>
+	</entity>
+	<entity id="contact.showcompanyinfos-help">
+		<locale lang="fr">Afficher les informations sur la société</locale>
+		<locale lang="en">Show Company informations</locale>
+	</entity>
+	<entity id="contact.showtelephonenumber">
+		<locale lang="fr">Afficher les coordonnées téléphoniques</locale>
+		<locale lang="en">Show telephone number</locale>
+	</entity>
+	<entity id="contact.showtelephonenumber-help">
+		<locale lang="fr">Afficher les coordonnées téléphoniques</locale>
+		<locale lang="en">Show telephone number</locale>
+	</entity>
+	<entity id="contact.showaddress">
+		<locale lang="fr">Afficher l'adresse</locale>
+		<locale lang="en">Show address</locale>
+	</entity>
+	<entity id="contact.showaddress-help">
+		<locale lang="fr">Afficher l'adresse</locale>
+		<locale lang="en">Show address</locale>
+	</entity>
+	<entity id="contact.showcontactpagelink">
+		<locale lang="fr">Afficher le lien vers le formulaire de contact</locale>
+		<locale lang="en">Show contact page link</locale>
+	</entity>
+	<entity id="contact.showcontactpagelink-help">
+		<locale lang="fr">Afficher le lien vers le formulaire de contact</locale>
+		<locale lang="en">Show contact page link</locale>
+	</entity>
+	<entity id="contact.showlinktodetail">
+		<locale lang="fr">Afficher le lien vers le détail</locale>
+		<locale lang="en">Show detail page link</locale>
+	</entity>
+	<entity id="contact.showlinktodetail-help">
+		<locale lang="fr">Afficher le lien vers la page de détail du contact</locale>
+		<locale lang="en">Show detail page link</locale>
+	</entity>
+	<entity id="contactlist.title">
+		<locale lang="fr">Trombinoscope</locale>
+		<locale lang="en">Group photo</locale>
+	</entity>
+	<entity id="contactlist.title-help">
+		<locale lang="fr">Trombinoscope</locale>
+		<locale lang="en">Group photo</locale>
+	</entity>
+	<entity id="contactlist.showphoto">
+		<locale lang="fr">Afficher la photo</locale>
+		<locale lang="en">Show photo</locale>
+	</entity>
+	<entity id="contactlist.showphoto-help">
+		<locale lang="fr">Afficher la photo</locale>
+		<locale lang="en">Show photo</locale>
+	</entity>
+	<entity id="contactlist.showcompanyinfos">
+		<locale lang="fr">Afficher les informations sur la société</locale>
+		<locale lang="en">Show Company informations</locale>
+	</entity>
+	<entity id="contactlist.showcompanyinfos-help">
+		<locale lang="fr">Afficher les informations sur la société (Nom de la société et le poste qu'occupe le contact)</locale>
+		<locale lang="en">Show Company informations (Company name and contact's function)</locale>
+	</entity>
+	<entity id="contactlist.showtelephonenumber">
+		<locale lang="fr">Afficher les coordonnées téléphoniques</locale>
+		<locale lang="en">Show telephone number</locale>
+	</entity>
+	<entity id="contactlist.showtelephonenumber-help">
+		<locale lang="fr">Afficher les coordonnées téléphoniques</locale>
+		<locale lang="en">Show telephone number</locale>
+	</entity>
+	<entity id="contactlist.showaddress">
+		<locale lang="fr">Afficher l'adresse</locale>
+		<locale lang="en">Show address</locale>
+	</entity>
+	<entity id="contactlist.showaddress-help">
+		<locale lang="fr">Afficher l'adresse</locale>
+		<locale lang="en">Show address</locale>
+	</entity>
+	<entity id="contactlist.showcontactpagelink">
+		<locale lang="fr">Afficher le lien vers le formulaire de contact</locale>
+		<locale lang="en">Show contact page link</locale>
+	</entity>
+	<entity id="contactlist.showcontactpagelink-help">
+		<locale lang="fr">Afficher le lien vers le formulaire de contact</locale>
+		<locale lang="en">Show contact page link</locale>
+	</entity>
+	<entity id="contactlist.showlinktodetail">
+		<locale lang="fr">Afficher le lien vers le détail</locale>
+		<locale lang="en">Show detail page link</locale>
+	</entity>
+	<entity id="contactlist.showlinktodetail-help">
+		<locale lang="fr">Afficher le lien vers la page de détail du contact</locale>
+		<locale lang="en">Show detail page link</locale>
+	</entity>
+	<entity id="contactlist.showfilters">
+		<locale lang="fr">Afficher les filtres</locale>
+		<locale lang="en">Show filters</locale>
+	</entity>
+	<entity id="contactlist.showfilters-help">
+		<locale lang="fr">Afficher les filtres</locale>
+		<locale lang="en">Show filters</locale>
+	</entity>
+	<entity id="contactlist.showcompanynamesfilter">
+		<locale lang="fr">Afficher le filtre par société</locale>
+		<locale lang="en">Show company filter</locale>
+	</entity>
+	<entity id="contactlist.showcompanynamesfilter-help">
+		<locale lang="fr">Afficher le filtre par société</locale>
+		<locale lang="en">Show company filter</locale>
+	</entity>
+	<entity id="contactlist.showfunctionsfilter">
+		<locale lang="fr">Afficher le filtre par fonction</locale>
+		<locale lang="en">Show function filter</locale>
+	</entity>
+	<entity id="contactlist.showfunctionsfilter-help">
+		<locale lang="fr">Afficher le filtre par fonction</locale>
+		<locale lang="en">Show function filter</locale>
+	</entity>
+	<entity id="contactlist.itemperpage">
+		<locale lang="fr">Contact par page</locale>
+		<locale lang="en">Contact per page</locale>
+	</entity>
+	<entity id="contactlist.itemperpage-help">
+		<locale lang="fr">Nombre de contact par page</locale>
+		<locale lang="en">Contacts per page</locale>
+	</entity>
 </localization>

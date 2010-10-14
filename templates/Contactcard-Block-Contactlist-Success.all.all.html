@@ -21,23 +21,22 @@
 </p>
 <!-- Filters : -->
 	
-	<form change:form="" method="get" tal:condition="configuration/getShowFilters"> 
-			<fieldset name="affine"><legend for="affine">Affiner la liste des contacts</legend>
-				<input change:selectinput="name companyname" label="&modules.contactcard.frontoffice.office;" listId="modules_contactcard/companyname" tal:condition="configuration/getShowCompanynamesFilter"/>
-				<br/><br/>
-				<input change:selectinput="name functions" label="&modules.contactcard.frontoffice.function;" listId="modules_contactcard/functions" tal:condition="configuration/getShowFunctionsFilter"/>
-				<br/><br/>
-				<input name="Filter" change:submit="label &modules.contactcard.frontoffice.submit;"  />
-			</fieldset>
-	</form>
+<form change:form="" method="get" tal:condition="configuration/getShowFilters"> 
+	<fieldset name="affine"><legend for="affine">Affiner la liste des contacts</legend>
+		<input change:selectinput="name companyname" label="&modules.contactcard.frontoffice.office;" listId="modules_contactcard/companyname" tal:condition="configuration/getShowCompanynamesFilter"/>
+		<br/><br/>
+		<input change:selectinput="name functions" label="&modules.contactcard.frontoffice.function;" listId="modules_contactcard/functions" tal:condition="configuration/getShowFunctionsFilter"/>
+		<br/><br/>
+		<input name="Filter" change:submit="label &modules.contactcard.frontoffice.submit;"  />
+	</fieldset>
+</form>
 
 <tal:block tal:condition="contacts/count">
 	<ol class="contact-list">
 		<li tal:repeat="contact contacts" class="contact-item">
 			<div change:include="module 'contactcard'; template 'Contactcard-Block-Contact-Success'; type 'html'; contact contact; configuration configuration"></div>
 		</li>
-	</ol>
-	
+	</ol>	
 	<div change:paginator="contacts"></div>
 </tal:block>
-	<p tal:condition="not:contacts/count" change:translate="modules.contactcard.frontoffice.No-contact ; companyname companyname ; functions functions"></p>
+<p tal:condition="not:contacts/count" change:translate="modules.contactcard.frontoffice.No-contact ; companyname companyname ; functions functions"></p>
