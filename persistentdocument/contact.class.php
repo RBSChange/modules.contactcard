@@ -96,4 +96,10 @@ class contactcard_persistentdocument_contact extends contactcard_persistentdocum
 			}
 		}
 	}
+	
+	public function hasAddressInformations()
+	{
+		return f_util_StringUtils::isNotEmpty($this->getAddress1()) || f_util_StringUtils::isNotEmpty($this->getAddress2()) ||  f_util_StringUtils::isNotEmpty($this->getZipcode()) || f_util_StringUtils::isNotEmpty($this->getCity()) || f_util_StringUtils::isNotEmpty($this->getCountry());
+	}
+
 }

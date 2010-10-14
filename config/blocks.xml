@@ -1,4 +1,54 @@
 <?xml version="1.0"?>
 <blocks>
-	<block type="modules_contactcard_detail" display="" icon="contactcard" label="&amp;modules.contactcard.bo.blocks.Detail;" />
+  <block type="modules_contactcard_contact" icon="contactcard" label="&amp;modules.contactcard.bo.blocks.contact.Title;">
+    <parameters>
+      <parameter name="showPhoto" type="Boolean" default-value="true"/>
+      <parameter name="showCompanyInfos" type="Boolean" default-value="true"/>
+      <parameter name="showTelephoneNumber" type="Boolean" default-value="true"/>
+      <parameter name="showAddress" type="Boolean" default-value="true"/>
+      <parameter name="showContactpageLink" type="Boolean" default-value="true"/>
+    </parameters>
+  </block>
+  <block type="modules_contactcard_contactlist" icon="list-block" label="&amp;modules.contactcard.bo.blocks.contactlist.Title;">
+    <parameters>
+    	<parameter name="itemPerPage" type="Integer"  default-value="10" min-occurs="1"/>
+		<parameter name="showPhoto" type="Boolean" default-value="true"/>
+	    <parameter name="showCompanyInfos" type="Boolean" default-value="true"/>
+	    <parameter name="showTelephoneNumber" type="Boolean" default-value="true"/>
+	    <parameter name="showAddress" type="Boolean" default-value="true"/>
+	    <parameter name="showContactpageLink" type="Boolean" default-value="true"/>
+	    <parameter name="showFilters" type="Boolean" default-value="true"/>
+		    <parameter name="showCompanynamesFilter" type="Boolean" default-value="true"/>
+		    <parameter name="showFunctionsFilter" type="Boolean" default-value="true"/>
+    </parameters>
+    	<xul>
+			<javascript>
+				<constructor><![CDATA[
+					var fields = this.getFields();
+					var me = this;
+					fields['showFilters'].addEventListener('fieldChanged', function(event) {me.onShowFiltersChange(event)}, true);
+					this.addEventListener('gridValuesUpdated', function(event) {me.onShowFiltersChange(event)}, true);
+				]]></constructor>
+				<method name="onShowFiltersChange">
+					<body><![CDATA[
+						try
+						{
+							var fields = this.getFields();
+							var field = fields.showFilters;
+							var value = (('setInitialValue' in field) ? field.value : field.getAttribute('initialvalue')) != 'true';
+							this.getElementByAnonId('showCompanynamesFilter_cnt').collapsed = value;
+							this.getElementByAnonId('showFunctionsFilter_cnt').collapsed = value;
+							this.setAttribute('onShowFiltersChange', (value ? 'true' : 'false'));
+						}
+		 				catch (e)
+		 				{
+		 					wCore.error("onShowFiltersChange", [], e);
+		 				}
+					]]></body>
+				</method>
+			</javascript>
+		</xul>
+   </block>
+   <!-- uncomment to use the deprecated contactcard_BlockDetailAction 
+   <block type="modules_contactcard_detail" display="" icon="contactcard" label="&amp;modules.contactcard.bo.blocks.Detail;"/> -->
 </blocks>

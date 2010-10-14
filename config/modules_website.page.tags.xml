@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <tags extends="generic">
-	<tag label="&amp;modules.contactcard.bo.general.tag.Detail-page;" icon="contactcard">contextual_website_website_modules_contactcard_page-detail</tag>
 	<tag label="&amp;modules.contactcard.bo.general.tag.Contact-page;" icon="form">contextual_website_website_modules_contactcard_page-contact</tag>
+	<tag label="&amp;modules.contactcard.bo.tags.contact-block;" icon="contactcard">contextual_website_website_modules_contactcard_contact</tag>
+	<!-- uncomment to use the deprecated contactcard_BlockDetailAction 
+	<tag label="&amp;modules.contactcard.bo.general.tag.Detail-page;" icon="contactcard">contextual_website_website_modules_contactcard_page-detail</tag> -->
 </tags>

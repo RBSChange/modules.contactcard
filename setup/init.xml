@@ -4,21 +4,7 @@
 	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
 	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
 
-	<systemfolder module="list" relatedmodule="contactcard">
-	
-		<editablelist listid="modules_contactcard/title" order="false"
-			description="Civilités pour le module contactcard"
-			label="Civilités pour le module contactcard">	
-			<item label="M." />
-			<item label="Mlle" />
-			<item label="Mme" />
-		</editablelist>	
-		
-		<dynamiclist listid="modules_contactcard/languages"
-			label="Liste des langues disponibles" description="Langues disponible pour la réception des messages de notification">
-		</dynamiclist>
-	</systemfolder>
-	
+<!-- Listes disponible dans le fichier lists.xml  -->
 	<systemfolder module="form" relatedmodule="contactcard">
 		<form formid="modules_contactcard/contact"
 			  label="envoyer un e-mail au contact" submitButton="Envoyer" 

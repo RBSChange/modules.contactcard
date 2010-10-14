@@ -129,7 +129,7 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 			try 
 			{
 				$website = website_WebsiteModuleService::getInstance()->getCurrentWebsite();
-				return TagService::getInstance()->getDocumentByContextualTag('contextual_website_website_modules_contactcard_page-detail', $website);
+				return TagService::getInstance()->getDocumentByContextualTag('contextual_website_website_modules_contactcard_contact', $website);
 			}
 			catch (Exception $e)
 			{
@@ -138,5 +138,44 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 		}
 		return null;
 	}
-
+	
+	/**
+	 * @return string[]
+	 */
+	public function getAllcompanyNames()
+	{	
+		$contactcardInstance = contactcard_ContactService::getInstance();
+		$query = $contactcardInstance->createQuery();
+		$query->add(Restrictions::published())->setProjection(Projections::groupProperty('name'));
+		$companynamesAvailable = $query->findColumn('name');
+		return $companynamesAvailable;
+	}
+	
+	/**
+	 * @return string[] 
+	 */
+	
+	public function getAllFunctions()
+	{
+		$contactcardInstance = contactcard_ContactService::getInstance();
+		$query = $contactcardInstance->createQuery();
+		$query->add(Restrictions::published())->setProjection(Projections::groupProperty('function'));
+		$functionsAvailable = $query->findColumn('function');
+		return $functionsAvailable;
+	}
+	
+	function getPublishedFiltered($restrictions, $orders = array())
+	{
+		$query = $this->createQuery();
+		$query->add(Restrictions::published());
+		foreach ($restrictions as $restriction)
+		{
+			$query->add($restriction);
+		}
+		foreach ($orders as $order)
+		{
+			$query->addOrder($order);
+		}
+		return $query->find();
+	}
 }

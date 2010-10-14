@@ -45,4 +45,28 @@
     <locale lang="en">send a mail to {name}</locale>
     <locale lang="de">{name} eine E-mail schicken</locale>
   </entity>
+  <entity id="order-by">
+  	<locale lang="fr">Trier par</locale>
+  	<locale lang="en">Order by</locale>
+  </entity>
+  <entity id="order-by-direction">
+ 	<locale lang="fr">Et par</locale>
+  	<locale lang="en">And by</locale>
+  </entity>
+  <entity id="order-by-asc">
+ 	<locale lang="fr">ordre croissant</locale>
+  	<locale lang="en">order by asc</locale>
+  </entity>  
+  <entity id="order-by-desc">
+ 	<locale lang="fr">ordre décroissant</locale>
+  	<locale lang="en">order by desc</locale>
+  </entity>
+  <entity id="submit">
+ 	<locale lang="fr">Appliquer les filtres</locale>
+  	<locale lang="en">Submit</locale>
+  </entity>
+  <entity id="no-contact">
+ 	<locale lang="fr">Désolé, il n'y a personne dans le trombinoscope ayant la fonction {functions} dans la société {companyname}.</locale>
+ 	<locale lang="en">Sorry, there is nobody in group photo with the function {functions} in company {companyname}</locale>
+  </entity>
 </localization>

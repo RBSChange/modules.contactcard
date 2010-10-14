@@ -1,18 +1,18 @@
-.modules-contactcard-detail .column-one{
+.modules-contactcard .column-one{
 	float: left;
 	width: 73.2%;
 	padding: 1.2%;
 	padding-left: 0;
 	margin-top: 12px;
 }
-.modules-contactcard-detail .column-two{
+.modules-contactcard .column-two{
 	float: left;
 	width: 24.4%;
 	padding: 0 1.2%;
 	padding-right: 0;
 	margin-top: 22px;
 }
-.modules-contactcard-detail .vcard-one ol.vcard{
+.modules-contactcard .vcard-one ol.vcard{
 	margin: 0;
 	margin-bottom: 10px;
 	padding: 4px;
@@ -20,80 +20,88 @@
 	width: 98%;
 	clear: left;
 }
-.modules-contactcard-detail .vcard-one ol.vcard li{
+.modules-contactcard .vcard-one ol.vcard li{
 	padding: 0;
 	margin: 2px 4px;
 	width: auto;
 	text-align: left;
 }
-.modules-contactcard-detail .vcard-one ol.vcard li.float-right{
+.modules-contactcard .vcard-one ol.vcard li.float-right{
 	text-align: right;
 	float: right;
 }
-.modules-contactcard-detail .vcard-one ol.vcard li ul li.display-inline{
+.modules-contactcard .vcard-one ol.vcard li ul li.display-inline{
 	display: inline;
 }
-.modules-contactcard-detail ol.trombi li{
+.modules-contactcard ol.trombi li{
 	width: 48%;
 	margin-right: 1%;
 	float: left;
 	display: block;
 	padding-bottom: 10px;
 }
-.modules-contactcard-detail ol.trombi li.last{
+.modules-contactcard ol.trombi li.last{
 	float: none;
 }
-.modules-contactcard-detail ol.trombi li.carriage-return{
+.modules-contactcard ol.trombi li.carriage-return{
 	clear: left;
 }
-.modules-contactcard-detail ol.vcard{
+.modules-contactcard ol.vcard{
+	/*
 	margin: 0;
 	padding: 4px;
 	background: #eee;
 	float: left;
+	*/
+	background: #EEEEEE;
+	float:left;
+	margin:10px;
+	padding:8px;
+	width:300px;
+	min-height:130px;
 }
-.modules-contactcard-detail ol.vcard li{
+.modules-contactcard ol.vcard li{
 	padding: 0;
 	margin: 2px 4px;
 	width: auto;
 	text-align: left;
 	float: none;
 }
-.modules-contactcard-detail ol.vcard li.float-right{
+.modules-contactcard ol.vcard li.float-right{
 	text-align: right;
 	float: right;
 }
-.modules-contactcard-detail ol.vcard li ul li{
+.modules-contactcard ol.vcard li ul li{
 	margin: 0;
 	padding: 0;
 	padding-left: 6px;
 }
-.modules-contactcard-detail ol.vcard li ul li.display-inline{
+.modules-contactcard ol.vcard li ul li.display-inline{
 	display: inline;
 }
-.modules-contactcard-detail ul.folder-vertical{
+.modules-contactcard ul.folder-vertical{
 	list-style-type: none;
 }
-.modules-contactcard-detail ul.folder-vertical li{
+.modules-contactcard ul.folder-vertical li{
 	background: url(/media/frontoffice/folder.png) no-repeat;
 	text-align: left;
 	padding: 2px 0 2px 20px;
 }
-.modules-contactcard-detail ul.folder-horizontal{
+.modules-contactcard ul.folder-horizontal{
 	list-style-type: none;
 	margin-top: 12px;
 	margin-bottom: 6px;
 }
-.modules-contactcard-detail ul.folder-horizontal li{
+.modules-contactcard ul.folder-horizontal li{
 	display: inline;
 	background: url(/media/frontoffice/breadcrumb_subfolder.png) no-repeat 0 .1em;
 	padding: 2px 0 2px 40px;
 }
-.modules-contactcard-detail ul.folder-horizontal li.first{
+.modules-contactcard ul.folder-horizontal li.first{
 	background: none;
 	padding: 2px 0 2px 0;
 }
-.modules-contactcard-detail ul.folder-horizontal li img{
+.modules-contactcard ul.folder-horizontal li img{
 	margin-right: 6px;
 	vertical-align: middle;
 }
@@ -102,6 +110,13 @@
 	color: red;
 	border: 1px solid red;
 	padding: 5px;
+}
+/*
+.modules-contactcard ul.contact-list {
+	border: thin;
+}*/
+.modules-contactcard li.contact-item {
+	display: inline-block;
 }
 
 @import url(/modules/contactcard/style/frontoffice.!xul.all.css);
