@@ -72,7 +72,7 @@ class contactcard_persistentdocument_contact extends contactcard_persistentdocum
 				$page = $ws->getDocumentByContextualTag('contextual_website_website_modules_contactcard_page-contact', $ws->getCurrentWebsite());
 				if ($page->isPublicated())
 				{
-					$contactFormLink = sprintf('<a href="%s" class="link">%s</a>', LinkHelper::getUrl($page, $this->getLang(), array('formParam[receiverIds]' => $this->getId())), f_Locale::translate('&modules.contactcard.frontoffice.Contactnamed;', array("name" => $nodeAttributes['label'])));
+					$contactFormLink = sprintf('<a href="%s" class="link">%s</a>', LinkHelper::getDocumentUrl($page, $this->getLang(), array('formParam[receiverIds]' => $this->getId())), f_Locale::translate('&modules.contactcard.frontoffice.Contactnamed;', array("name" => $nodeAttributes['label'])));
 					$nodeAttributes[f_tree_parser_AttributesBuilder::HTMLLINK_ATTRIBUTE] = $contactFormLink;
 				}
 			}
