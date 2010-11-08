@@ -51,8 +51,4 @@
 			</javascript>
 		</xul>
 	</block>
-	<!--
-		uncomment to use the deprecated contactcard_BlockDetailAction 
-		<block type="modules_contactcard_detail" display="" icon="contactcard" label="&amp;modules.contactcard.bo.blocks.Detail;"/>
-	-->
 </blocks>
