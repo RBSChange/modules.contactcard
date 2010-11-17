@@ -63,17 +63,17 @@ class contactcard_persistentdocument_contact extends contactcard_persistentdocum
 	protected function addTreeAttributes($moduleName, $treeType, &$nodeAttributes)
 	{
 		$nodeAttributes['label'] = $this->getTreeNodeLabel();
-		$nodeAttributes[f_tree_parser_AttributesBuilder::BLOCK_ATTRIBUTE] = 'modules_' . $moduleName . '_detail';
-		if ($treeType == tree_parser_TreeParser::TYPE_MULTI_LIST)
+		$nodeAttributes['block'] = 'modules_' . $moduleName . '_detail';
+		if ($treeType == 'wmultilist')
 		{
 			try
 			{
-				$ws = website_WebsiteModuleService::getInstance();
-				$page = $ws->getDocumentByContextualTag('contextual_website_website_modules_contactcard_page-contact', $ws->getCurrentWebsite());
-				if ($page->isPublicated())
+				$website = website_WebsiteModuleService::getInstance()->getCurrentWebsite();
+				$page = TagService::getInstance()->getDocumentByContextualTag('contextual_website_website_modules_contactcard_page-contact', $website);
+				if ($page->isPublished())
 				{
 					$contactFormLink = sprintf('<a href="%s" class="link">%s</a>', LinkHelper::getDocumentUrl($page, $this->getLang(), array('formParam[receiverIds]' => $this->getId())), f_Locale::translate('&modules.contactcard.frontoffice.Contactnamed;', array("name" => $nodeAttributes['label'])));
-					$nodeAttributes[f_tree_parser_AttributesBuilder::HTMLLINK_ATTRIBUTE] = $contactFormLink;
+					$nodeAttributes['htmllink'] = $contactFormLink;
 				}
 			}
 			catch (Exception $e)
@@ -91,9 +91,11 @@ class contactcard_persistentdocument_contact extends contactcard_persistentdocum
 		}
 	}
 	
+	/**
+	 * @return boolean
+	 */
 	public function hasAddressInformations()
 	{
 		return f_util_StringUtils::isNotEmpty($this->getAddress1()) || f_util_StringUtils::isNotEmpty($this->getAddress2()) ||  f_util_StringUtils::isNotEmpty($this->getZipcode()) || f_util_StringUtils::isNotEmpty($this->getCity()) || f_util_StringUtils::isNotEmpty($this->getCountry());
 	}
-
 }
