@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.contactcard.bo.actions" lcid="fr_FR">
+  <key id="create-contact">créer une fiche contact</key>
+  <key id="create_">créer...</key>
+</i18n>

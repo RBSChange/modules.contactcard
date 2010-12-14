@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.contactcard.bo.general.list" lcid="fr_FR">
+  <key id="label">civilités pour le module fiches contact</key>
+  <key id="desc">civilités pour le module contact</key>
+  <key id="mister">m.</key>
+  <key id="miss">mlle</key>
+  <key id="madam">mme</key>
+</i18n>

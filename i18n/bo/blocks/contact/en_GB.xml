@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.contactcard.bo.blocks.contact" lcid="en_GB">
+  <key id="title">Contact's detail</key>
+  <key id="showphoto">Show photo</key>
+  <key id="showphoto-help">Show photo</key>
+  <key id="showcompanyinfos">Show Company informations</key>
+  <key id="showcompanyinfos-help">Show Company informations</key>
+  <key id="showtelephonenumber">Show telephone number</key>
+  <key id="showtelephonenumber-help">Show telephone number</key>
+  <key id="showaddress">Show address</key>
+  <key id="showaddress-help">Show address</key>
+  <key id="showcontactpagelink">Show contact page link</key>
+  <key id="showcontactpagelink-help">Show contact page link</key>
+  <key id="showlinktodetail">Show detail page link</key>
+  <key id="showlinktodetail-help">Show detail page link</key>
+</i18n>

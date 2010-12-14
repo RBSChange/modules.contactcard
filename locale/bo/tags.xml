@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<localization>
-	<entity id="contact-block">
-		<locale lang="fr">Détail d'une fiche contact</locale>
-		<locale lang="en">Contact's detail</locale>
-	</entity>
-</localization>

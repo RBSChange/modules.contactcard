@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.contactcard.document.contact" lcid="fr_FR">
+  <key id="document-name">fiche contact</key>
+  <key id="label">libellé</key>
+  <key id="label-help">nom de l'organisme, de la société ou du service</key>
+  <key id="name">société</key>
+  <key id="name-help">nom et prénom</key>
+  <key id="address1">adresse</key>
+  <key id="address1-help">adresse postale du contact</key>
+  <key id="address2">complément d'adresse</key>
+  <key id="address2-help">complément de l'adresse postale du contact</key>
+  <key id="zipcode">code postal</key>
+  <key id="city">ville</key>
+  <key id="country">pays</key>
+  <key id="title">civilité</key>
+  <key id="function">fonction</key>
+  <key id="photo">photo</key>
+  <key id="phone">téléphone</key>
+  <key id="post">poste</key>
+  <key id="post-help">numéro de poste téléphonique</key>
+  <key id="fax">fax</key>
+  <key id="mails">emails</key>
+  <key id="mails-help">les adresses e-mail doivent être séparées par une virgule (,)</key>
+  <key id="lastname">nom</key>
+  <key id="firstname">prénom</key>
+  <key id="communicationlanguage">langue de communication</key>
+  <key id="indexingstatus">indexation</key>
+</i18n>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.contactcard.bo.blocks.contactlist" lcid="en_GB">
+  <key id="title">Group photo</key>
+  <key id="title-help">Group photo</key>
+  <key id="showphoto">Show photo</key>
+  <key id="showphoto-help">Show photo</key>
+  <key id="showcompanyinfos">Show Company informations</key>
+  <key id="showcompanyinfos-help">Show Company informations (Company name and contact's function)</key>
+  <key id="showtelephonenumber">Show telephone number</key>
+  <key id="showtelephonenumber-help">Show telephone number</key>
+  <key id="showaddress">Show address</key>
+  <key id="showaddress-help">Show address</key>
+  <key id="showcontactpagelink">Show contact page link</key>
+  <key id="showcontactpagelink-help">Show contact page link</key>
+  <key id="showlinktodetail">Show detail page link</key>
+  <key id="showlinktodetail-help">Show detail page link</key>
+  <key id="showfilters">Show filters</key>
+  <key id="showfilters-help">Show filters</key>
+  <key id="showcompanynamesfilter">Show company filter</key>
+  <key id="showcompanynamesfilter-help">Show company filter</key>
+  <key id="showfunctionsfilter">Show function filter</key>
+  <key id="showfunctionsfilter-help">Show function filter</key>
+  <key id="itemperpage">Contact per page</key>
+  <key id="itemperpage-help">Contacts per page</key>
+</i18n>

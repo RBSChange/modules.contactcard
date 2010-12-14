@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.contactcard.frontoffice" lcid="de_DE">
+  <key id="office">Firma</key>
+  <key id="function">Funktion</key>
+  <key id="phone">Telefon</key>
+  <key id="post">Durchwahl</key>
+  <key id="address">Adresse</key>
+  <key id="contact">Kontakt</key>
+  <key id="fax">Fax</key>
+  <key id="contactme">Diesem Kontakt eine E-mail schicken</key>
+  <key id="contactnamed">{name} eine E-mail schicken</key>
+</i18n>

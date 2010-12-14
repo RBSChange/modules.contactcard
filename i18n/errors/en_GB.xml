@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.contactcard.errors" lcid="en_GB">
+  <key id="modules-contactcard-getpreferencesdocument">you don't have the appropriate permission to perform this operation : ″Open preferences window″</key>
+  <key id="modules-contactcard-editlocale">you don't have the appropriate permission to perform this operation : ″Edit a locale″</key>
+  <key id="modules-contactcard-order">you don't have the appropriate permission to perform this operation : ″Sort out the elements″</key>
+  <key id="modules-contactcard-activate-contact">you don't have the appropriate permission to perform this operation : ″Activate a contact″</key>
+  <key id="modules-contactcard-cancel-contact">you don't have the appropriate permission to perform this operation : ″Cancel a contact″</key>
+  <key id="modules-contactcard-activate-webcontact">you don't have the appropriate permission to perform this operation : ″″</key>
+  <key id="modules-contactcard-cancel-webcontact">you don't have the appropriate permission to perform this operation : ″″</key>
+  <key id="modules-contactcard-enabled">you don't have the appropriate permission to perform this operation : ″Access to the module″</key>
+</i18n>
