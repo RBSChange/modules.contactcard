@@ -8,9 +8,9 @@
 		<editablelist listid="modules_contactcard/title" order="false"
 			description="Civilités pour le module contactcard"
 			label="Civilités pour le module contactcard">	
-			<item label="M." />
-			<item label="Mlle" />
-			<item label="Mme" />
+			<item byLabel="M." />
+			<item byLabel="Mlle" />
+			<item byLabel="Mme" />
 		</editablelist>
 		
 		<dynamiclist listid="modules_contactcard/languages"
