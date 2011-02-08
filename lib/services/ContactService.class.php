@@ -178,4 +178,41 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 		}
 		return $query->find();
 	}
+	
+	/**
+ 	 * @param contactcard_persistentdocument_contact $document
+	 * @param string $moduleName
+	 * @param string $treeType
+	 * @param array<string, string> $nodeAttributes
+	 */
+	public function addTreeAttributes($document, $moduleName, $treeType, &$nodeAttributes)
+	{
+		$nodeAttributes['label'] = $document->getTreeNodeLabel();
+		$nodeAttributes['block'] = 'modules_' . $moduleName . '_detail';
+		if ($treeType == 'wmultilist')
+		{
+			try
+			{
+				$website = website_WebsiteModuleService::getInstance()->getCurrentWebsite();
+				$page = TagService::getInstance()->getDocumentByContextualTag('contextual_website_website_modules_contactcard_page-contact', $website);
+				if ($page->isPublished())
+				{
+					$contactFormLink = sprintf('<a href="%s" class="link">%s</a>', LinkHelper::getDocumentUrl($page, $document->getLang(), array('formParam[receiverIds]' => $document->getId())), f_Locale::translate('&modules.contactcard.frontoffice.Contactnamed;', array("name" => $nodeAttributes['label'])));
+					$nodeAttributes['htmllink'] = $contactFormLink;
+				}
+			}
+			catch (Exception $e)
+			{
+				Framework::exception($e);
+			}
+		}
+		else if ($treeType == 'wlist')
+		{
+			$picture = $document->getPhoto();
+			if ($picture !== null)
+			{
+				$nodeAttributes['thumbnailsrc'] = MediaHelper::getPublicFormatedUrl($picture, "modules.uixul.backoffice/thumbnaillistitem");
+			}
+		}
+	}
 }

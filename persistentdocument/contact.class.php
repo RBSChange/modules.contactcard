@@ -56,42 +56,6 @@ class contactcard_persistentdocument_contact extends contactcard_persistentdocum
 	}
 	
 	/**
-	 * @param string $moduleName
-	 * @param string $treeType
-	 * @param array<string, string> $nodeAttributes
-	 */
-	protected function addTreeAttributes($moduleName, $treeType, &$nodeAttributes)
-	{
-		$nodeAttributes['label'] = $this->getTreeNodeLabel();
-		$nodeAttributes['block'] = 'modules_' . $moduleName . '_detail';
-		if ($treeType == 'wmultilist')
-		{
-			try
-			{
-				$website = website_WebsiteModuleService::getInstance()->getCurrentWebsite();
-				$page = TagService::getInstance()->getDocumentByContextualTag('contextual_website_website_modules_contactcard_page-contact', $website);
-				if ($page->isPublished())
-				{
-					$contactFormLink = sprintf('<a href="%s" class="link">%s</a>', LinkHelper::getDocumentUrl($page, $this->getLang(), array('formParam[receiverIds]' => $this->getId())), f_Locale::translate('&modules.contactcard.frontoffice.Contactnamed;', array("name" => $nodeAttributes['label'])));
-					$nodeAttributes['htmllink'] = $contactFormLink;
-				}
-			}
-			catch (Exception $e)
-			{
-				Framework::exception($e);
-			}
-		}
-		else if ($treeType == 'wlist')
-		{
-			$picture = $this->getPhoto();
-			if ($picture !== null)
-			{
-				$nodeAttributes['thumbnailsrc'] = MediaHelper::getPublicFormatedUrl($picture, "modules.uixul.backoffice/thumbnaillistitem");
-			}
-		}
-	}
-	
-	/**
 	 * @return boolean
 	 */
 	public function hasAddressInformations()
