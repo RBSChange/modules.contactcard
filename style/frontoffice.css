@@ -47,12 +47,6 @@
 	clear: left;
 }
 .modules-contactcard ol.vcard{
-	/*
-	margin: 0;
-	padding: 4px;
-	background: #eee;
-	float: left;
-	*/
 	background: #EEEEEE;
 	float:left;
 	margin:10px;
@@ -105,16 +99,13 @@
 	margin-right: 6px;
 	vertical-align: middle;
 }
-.vcard .contact-not-published,.vcard .contactform-page-not-published{
+.vcard .contact-not-published,
+.vcard .contactform-page-not-published{
 	background: #ff8888;
 	color: red;
 	border: 1px solid red;
 	padding: 5px;
 }
-/*
-.modules-contactcard ul.contact-list {
-	border: thin;
-}*/
 .modules-contactcard li.contact-item {
 	display: inline-block;
 }
