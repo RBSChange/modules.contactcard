@@ -188,7 +188,6 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 	public function addTreeAttributes($document, $moduleName, $treeType, &$nodeAttributes)
 	{
 		$nodeAttributes['label'] = $document->getTreeNodeLabel();
-		$nodeAttributes['block'] = 'modules_' . $moduleName . '_detail';
 		if ($treeType == 'wmultilist')
 		{
 			try
