@@ -69,39 +69,6 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 		}
 		$document->setLabel($label);
 	}
-
-	/**
-	 * Send a notification to a contact in the communication language defined if exist
-	 *
-	 * @param contactcard_persistentdocument_contact $contact
-	 * @param notification_persistentdocument_notification $notification
-	 * @param array $replacements
-	 */
-	public function sendNotification($contacts, $notification, $replacements)
-	{
-
-		foreach ($contacts as $contact)
-		{
-
-			// Get emails addresses of contact
-			$emails = $contact->getEmailAddresses();
-
-			// Get the communication language of contact
-			$lang = $contact->getCommunicationlanguage();
-
-			// Begin i18n work
-			RequestContext::getInstance()->beginI18nWork($lang);
-
-			// Send the notification
-			$notificationService = notification_NotificationService::getInstance();
-			$notificationService->sendMail($notification, $emails, $replacements);
-
-			// Close the i18n work
-			RequestContext::getInstance()->endI18nWork();
-
-		}
-
-	}
 	
 	/**
 	 * @param contactcard_persistentdocument_contact $document
@@ -212,6 +179,33 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 			{
 				$nodeAttributes['thumbnailsrc'] = MediaHelper::getPublicFormatedUrl($picture, "modules.uixul.backoffice/thumbnaillistitem");
 			}
+		}
+	}
+	
+	// Deprecated.
+
+	/**
+	 * @deprecated (will be removed in 4.0)
+	 */
+	public function sendNotification($contacts, $notification, $replacements)
+	{
+		foreach ($contacts as $contact)
+		{
+			// Get emails addresses of contact
+			$emails = $contact->getEmailAddresses();
+
+			// Get the communication language of contact
+			$lang = $contact->getCommunicationlanguage();
+
+			// Begin i18n work
+			RequestContext::getInstance()->beginI18nWork($lang);
+
+			// Send the notification
+			$notificationService = notification_NotificationService::getInstance();
+			$notificationService->sendMail($notification, $emails, $replacements);
+
+			// Close the i18n work
+			RequestContext::getInstance()->endI18nWork();
 		}
 	}
 }
