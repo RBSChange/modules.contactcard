@@ -6,13 +6,11 @@
 		
 	<rootfolder module="media">
 		<folder label="Exemple Fiches contacts">
-			<media
-				path="modules/contactcard/setup/sample/photo.png"
-				label="Photo non disponible" id="photo" />
+			<media path="modules/contactcard/setup/sample/photo.png" label="Photo non disponible" id="photo" />
 		</folder>
 	</rootfolder>
 
-	<website byTag="default_modules_website_default-website" template="webfactory/tplTwo">
+	<website byTag="default_modules_website_default-website">
 		<topic label="Outils" byLabel="Outils">
 			<page label="Contact" navigationVisibility="hidden" indexingstatus="false" >
 				<tag name="contextual_website_website_modules_contactcard_page-detail" />
