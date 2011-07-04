@@ -14,17 +14,11 @@ class contactcard_BlockContactAction extends website_BlockAction
 	 */
 	function execute($request, $response)
 	{
-		if ($this->isInBackoffice())
-		{
-			return website_BlockView::NONE;
-		}
-
 		$contact = $this->getDocumentParameter(K::COMPONENT_ID_ACCESSOR, "contactcard_persistentdocument_contact");
-		if ($contact === null)
+		if ($contact === null || !$contact->isPublished())
 		{
 			return website_BlockView::NONE;
 		}
-
 		$request->setAttribute('contact', $contact);
 		return website_BlockView::SUCCESS;
 	}

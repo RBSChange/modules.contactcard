@@ -14,10 +14,6 @@ class contactcard_BlockContactlistAction extends website_BlockAction
 	 */
 	function execute($request, $response)
 	{
-		if ($this->isInBackoffice())
-		{
-			return website_BlockView::NONE;
-		}
 		$restrictions = array();
 		$orders = array();
 		if ($request->hasNonEmptyParameter("companyname"))
