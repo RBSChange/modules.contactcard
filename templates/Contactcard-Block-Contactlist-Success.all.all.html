@@ -2,18 +2,18 @@
 
 <p class="normal">
 	<strong change:translate="modules.contactcard.frontoffice.Order-by"></strong>
-	<a tal:condition="php: orderBy != 'label'" change:currentPageLink="contactcardParam[orderBy] 'label'; contactcardParam[page] '1'"
+	<a tal:condition="php: orderBy != 'label'" change:currentpagelink="contactcardParam[orderBy] 'label'; contactcardParam[page] '1'"
 		change:translate="modules.contactcard.document.contact.label"></a>
 	<span tal:condition="php: orderBy == 'label'"
 		change:translate="modules.contactcard.document.contact.label"></span>.
 	<br/>
 	<strong change:translate="modules.contactcard.frontoffice.Order-by-direction"></strong>
-	<a tal:condition="php: orderByDirection != 'asc'" change:currentPageLink="contactcardParam[orderByDirection] 'asc'; contactcardParam[page] '1'"
+	<a tal:condition="php: orderByDirection != 'asc'" change:currentpagelink="contactcardParam[orderByDirection] 'asc'; contactcardParam[page] '1'"
 		change:translate="modules.contactcard.frontoffice.order-by-asc"></a>
 	<span tal:condition="php: orderByDirection == 'asc'"
 		change:translate="modules.contactcard.frontoffice.order-by-asc"></span>
 	|
-	<a tal:condition="php: orderByDirection != 'desc'" change:currentPageLink="contactcardParam[orderByDirection] 'desc'; contactcardParam[page] '1'"
+	<a tal:condition="php: orderByDirection != 'desc'" change:currentpagelink="contactcardParam[orderByDirection] 'desc'; contactcardParam[page] '1'"
 		change:translate="modules.contactcard.frontoffice.order-by-desc"></a>
 	<span tal:condition="php: orderByDirection == 'desc'"
 		change:translate="modules.contactcard.frontoffice.order-by-desc"></span>.
