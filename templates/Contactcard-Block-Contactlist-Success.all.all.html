@@ -1,22 +1,22 @@
 <div change:paginator="contacts"></div>
 
 <p class="normal">
-	<strong change:translate="modules.contactcard.frontoffice.Order-by"></strong>
+	<strong tal:content="trans:m.contactcard.frontoffice.order-by,ucf"></strong>
 	<a tal:condition="php: orderBy != 'label'" change:currentpagelink="contactcardParam[orderBy] 'label'; contactcardParam[page] '1'"
-		change:translate="modules.contactcard.document.contact.label"></a>
+		tal:content="trans:m.contactcard.document.contact.label"></a>
 	<span tal:condition="php: orderBy == 'label'"
-		change:translate="modules.contactcard.document.contact.label"></span>.
+		tal:content="trans:m.contactcard.document.contact.label"></span>.
 	<br/>
-	<strong change:translate="modules.contactcard.frontoffice.Order-by-direction"></strong>
+	<strong tal:content="trans:m.contactcard.frontoffice.order-by-direction,ucf"></strong>
 	<a tal:condition="php: orderByDirection != 'asc'" change:currentpagelink="contactcardParam[orderByDirection] 'asc'; contactcardParam[page] '1'"
-		change:translate="modules.contactcard.frontoffice.order-by-asc"></a>
+		tal:content="trans:m.contactcard.frontoffice.order-by-asc"></a>
 	<span tal:condition="php: orderByDirection == 'asc'"
-		change:translate="modules.contactcard.frontoffice.order-by-asc"></span>
+		tal:content="trans:m.contactcard.frontoffice.order-by-asc"></span>
 	|
 	<a tal:condition="php: orderByDirection != 'desc'" change:currentpagelink="contactcardParam[orderByDirection] 'desc'; contactcardParam[page] '1'"
-		change:translate="modules.contactcard.frontoffice.order-by-desc"></a>
+		tal:content="trans:m.contactcard.frontoffice.order-by-desc"></a>
 	<span tal:condition="php: orderByDirection == 'desc'"
-		change:translate="modules.contactcard.frontoffice.order-by-desc"></span>.
+		tal:content="trans:m.contactcard.frontoffice.order-by-desc"></span>.
 	<br/>
 </p>
 <!-- Filters : -->
@@ -39,4 +39,4 @@
 	</ol>	
 	<div change:paginator="contacts"></div>
 </tal:block>
-<p tal:condition="not:contacts/count" change:translate="modules.contactcard.frontoffice.No-contact ; companyname companyname ; functions functions"></p>
+<p tal:condition="not:contacts/count" tal:content="trans:m.contactcard.frontoffice.no-contact ,ucf,companyname=companyname,functions=functions"></p>
