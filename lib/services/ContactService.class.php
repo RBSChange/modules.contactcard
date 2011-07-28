@@ -181,31 +181,4 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 			}
 		}
 	}
-	
-	// Deprecated.
-
-	/**
-	 * @deprecated (will be removed in 4.0)
-	 */
-	public function sendNotification($contacts, $notification, $replacements)
-	{
-		foreach ($contacts as $contact)
-		{
-			// Get emails addresses of contact
-			$emails = $contact->getEmailAddresses();
-
-			// Get the communication language of contact
-			$lang = $contact->getCommunicationlanguage();
-
-			// Begin i18n work
-			RequestContext::getInstance()->beginI18nWork($lang);
-
-			// Send the notification
-			$notificationService = notification_NotificationService::getInstance();
-			$notificationService->sendMail($notification, $emails, $replacements);
-
-			// Close the i18n work
-			RequestContext::getInstance()->endI18nWork();
-		}
-	}
 }
