@@ -66,20 +66,8 @@ class contactcard_persistentdocument_contact extends contactcard_persistentdocum
 		$nodeAttributes[f_tree_parser_AttributesBuilder::BLOCK_ATTRIBUTE] = 'modules_' . $moduleName . '_detail';
 		if ($treeType == tree_parser_TreeParser::TYPE_MULTI_LIST)
 		{
-			try
-			{
-				$ws = website_WebsiteModuleService::getInstance();
-				$page = $ws->getDocumentByContextualTag('contextual_website_website_modules_contactcard_page-contact', $ws->getCurrentWebsite());
-				if ($page->isPublicated())
-				{
-					$contactFormLink = sprintf('<a href="%s" class="link">%s</a>', LinkHelper::getUrl($page, $this->getLang(), array('formParam[receiverIds]' => $this->getId())), f_Locale::translate('&modules.contactcard.frontoffice.Contactnamed;', array("name" => $nodeAttributes['label'])));
-					$nodeAttributes[f_tree_parser_AttributesBuilder::HTMLLINK_ATTRIBUTE] = $contactFormLink;
-				}
-			}
-			catch (Exception $e)
-			{
-				Framework::exception($e);
-			}
+			$content = f_Locale::translate('&modules.contactcard.frontoffice.Contactnamed;', array("name" => $nodeAttributes['label']));
+			$nodeAttributes['htmllink'] = '<a class="link" href="#" rel="cmpref:' . $this->getId() . '" lang="' . $this->getLang() . '">' . htmlspecialchars($content, ENT_NOQUOTES, 'UTF-8') . '</a>';
 		}
 		else if ($treeType == 'wlist')
 		{

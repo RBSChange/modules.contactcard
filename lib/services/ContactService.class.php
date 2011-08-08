@@ -178,4 +178,31 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 		}
 		return $query->find();
 	}
+	
+	/**
+	 * @see f_util_HtmlUtils::renderDocumentLink
+	 * @param media_persistentdocument_media $document
+	 * @param array $attributes
+	 * @param string $content
+	 * @param string $lang
+	 * @return string
+	 */
+	public function getXhtmlFragment($document, $attributes, $content, $lang)
+	{
+		try
+		{
+			$ws = website_WebsiteModuleService::getInstance();
+			$page = $ws->getDocumentByContextualTag('contextual_website_website_modules_contactcard_page-contact', $ws->getCurrentWebsite());
+			if ($page->isPublished())
+			{
+				$contactFormLink = LinkHelper::getUrl($page, $lang, array('formParam[receiverIds]' => $document->getId()));
+				$attributes['href'] = $contactFormLink;
+			}
+		}
+		catch (Exception $e)
+		{
+			Framework::exception($e);
+		}
+		return f_util_HtmlUtils::buildLink($attributes, $content);
+	}
 }

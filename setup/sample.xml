@@ -15,7 +15,7 @@
 	<website byTag="default_modules_website_default-website" template="webfactory/tplTwo">
 		<topic label="Outils" byLabel="Outils">
 			<page label="Contact" navigationVisibility="hidden" indexingstatus="false" >
-				<tag name="contextual_website_website_modules_contactcard_page-detail" />
+				<tag name="contextual_website_website_modules_contactcard_contact" />
 				<changecontent for="content-block">
 					<changeblock type="modules_contactcard_detail" />
 				</changecontent>
