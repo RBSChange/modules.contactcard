@@ -159,13 +159,8 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 		{
 			try
 			{
-				$website = website_WebsiteModuleService::getInstance()->getCurrentWebsite();
-				$page = TagService::getInstance()->getDocumentByContextualTag('contextual_website_website_modules_contactcard_page-contact', $website);
-				if ($page->isPublished())
-				{
-					$contactFormLink = sprintf('<a href="%s" class="link">%s</a>', LinkHelper::getDocumentUrl($page, $document->getLang(), array('formParam[receiverIds]' => $document->getId())), f_Locale::translate('&modules.contactcard.frontoffice.Contactnamed;', array("name" => $nodeAttributes['label'])));
-					$nodeAttributes['htmllink'] = $contactFormLink;
-				}
+				$content = f_Locale::translate('&modules.contactcard.frontoffice.Contactnamed;', array("name" => $nodeAttributes['label']));
+			$nodeAttributes['htmllink'] = '<a class="link" href="#" rel="cmpref:' . $document->getId() . '" lang="' . $document->getLang() . '">' . htmlspecialchars($content, ENT_NOQUOTES, 'UTF-8') . '</a>';
 			}
 			catch (Exception $e)
 			{
@@ -180,5 +175,32 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 				$nodeAttributes['thumbnailsrc'] = MediaHelper::getPublicFormatedUrl($picture, "modules.uixul.backoffice/thumbnaillistitem");
 			}
 		}
+	}
+	
+	/**
+	 * @see f_util_HtmlUtils::renderDocumentLink
+	 * @param media_persistentdocument_media $document
+	 * @param array $attributes
+	 * @param string $content
+	 * @param string $lang
+	 * @return string
+	 */
+	public function getXhtmlFragment($document, $attributes, $content, $lang)
+	{
+		try
+		{
+			$ws = website_WebsiteModuleService::getInstance();
+			$page = TagService::getInstance()->getDocumentByContextualTag('contextual_website_website_modules_contactcard_page-contact', $ws->getCurrentWebsite());
+			if ($page->isPublished())
+			{
+				$contactFormLink = LinkHelper::getDocumentUrl($page, $lang, array('formParam[receiverIds]' => $document->getId()));
+				$attributes['href'] = $contactFormLink;
+			}
+		}
+		catch (Exception $e)
+		{
+			Framework::exception($e);
+		}
+		return f_util_HtmlUtils::buildLink($attributes, $content);
 	}
 }
