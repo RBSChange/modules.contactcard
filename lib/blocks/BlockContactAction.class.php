@@ -14,7 +14,7 @@ class contactcard_BlockContactAction extends website_BlockAction
 	 */
 	function execute($request, $response)
 	{
-		$contact = $this->getDocumentParameter(K::COMPONENT_ID_ACCESSOR, "contactcard_persistentdocument_contact");
+		$contact = $this->getDocumentParameter(change_Request::DOCUMENT_ID, "contactcard_persistentdocument_contact");
 		if ($contact === null || !$contact->isPublished())
 		{
 			return website_BlockView::NONE;
