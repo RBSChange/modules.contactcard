@@ -203,4 +203,17 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 		}
 		return f_util_HtmlUtils::buildLink($attributes, $content);
 	}
+	
+	/**
+	 * @param indexer_IndexedDocument $indexedDocument
+	 * @param contactcard_persistentdocument_contact $document
+	 * @param indexer_IndexService $indexService
+	 */
+	protected function updateIndexDocument($indexedDocument, $document, $indexService)
+	{
+		if (!$document->getIndexingstatus())
+		{
+			$indexedDocument->foIndexable(false);
+		}
+	}
 }
