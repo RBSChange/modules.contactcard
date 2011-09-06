@@ -6,7 +6,7 @@
 		<field name="firstname" hidehelp="true" />
 		<field name="name" />
 		<field name="function" hidehelp="true" />
-		<field name="photo" hidehelp="true" />
+		<field name="photo" hidehelp="true" allowfile="true" mediafoldername="Inbox"/>
 		<field name="communicationlanguage" hidehelp="true" />
 		<field name="mails" />
 		<field name="indexingstatus" hidehelp="true" />
