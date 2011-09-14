@@ -14,43 +14,43 @@
 		<h4 tal:condition="contact/getLastname" class="fn">
 			<a tal:condition="configuration/getShowLinkToDetail" change:link="tag contextual_website_website_modules_contactcard_contact ; contactcardParam[cmpref] contact/getId">		
 				<strong>
-					<span tal:condition="contact/getTitle" class="honorific-prefix">${contact/getTitle/getLabelAsHtml}</span>
-					<span class="given-name">${contact/getFirstnameAsHtml}</span>
-					<span class="family-name">${contact/getLastnameAsHtml}</span>
+					<span tal:condition="contact/getTitle" class="honorific-prefix">${contact/getTitle/getLabel}</span>
+					<span class="given-name">${contact/getFirstname}</span>
+					<span class="family-name">${contact/getLastname}</span>
 				</strong>
 			</a>
 			<strong tal:condition="not:configuration/getShowLinkToDetail">
-				<span tal:condition="contact/getTitle" class="honorific-prefix">${contact/getTitle/getLabelAsHtml}</span>
-				<span class="given-name">${contact/getFirstnameAsHtml}</span>
-				<span class="family-name">${contact/getLastnameAsHtml}</span>
+				<span tal:condition="contact/getTitle" class="honorific-prefix">${contact/getTitle/getLabel}</span>
+				<span class="given-name">${contact/getFirstname}</span>
+				<span class="family-name">${contact/getLastname}</span>
 			</strong>
 		</h4>
-		<h4 tal:condition="not: contact/getLastname" class="org fn">${contact/getNameAsHtml}</h4>	
+		<h4 tal:condition="not: contact/getLastname" class="org fn">${contact/getName}</h4>	
 	</li>
 	<tal:block tal:condition="configuration/getShowCompanyInfos">
 		<li tal:condition="php: contact.getName() && contact.getLastname()">
 			<strong tal:content="trans:m.contactcard.frontoffice.office,ucf,lab"></strong>
-			<span class="org">${contact/getNameAsHtml}</span>
+			<span class="org">${contact/getName}</span>
 		</li>
 		<li tal:condition="contact/getFunction">
 			<strong tal:content="trans:m.contactcard.frontoffice.function,ucf,lab"></strong>
-			<span class="title">${contact/getFunctionAsHtml}</span>
+			<span class="title">${contact/getFunction}</span>
 		</li>
 	</tal:block>	
 	<tal:block tal:condition="configuration/getShowTelephoneNumber">
 		<li tal:condition="contact/getPhone" class="tel">
 			<strong tal:content="trans:m.contactcard.frontoffice.phone,ucf,lab"></strong>
 			<span class="type display-none">work</span>
-			<span class="value">${contact/getPhoneAsHtml}</span>
+			<span class="value">${structure contact/getPhoneAsHtml}</span>
 		</li>
 		<li tal:condition="contact/getPost">
 			<strong tal:content="trans:m.contactcard.frontoffice.post,ucf,lab"></strong>
-			${contact/getPostAsHtml}
+			${structure contact/getPostAsHtml}
 		</li>
 		<li tal:condition="contact/getFax" class="tel">
 			<strong tal:content="trans:m.contactcard.frontoffice.fax,ucf,lab"></strong>
 			<span class="type display-none">fax</span>
-			<span class="value">${contact/getFaxAsHtml}</span>
+			<span class="value">${structure contact/getFaxAsHtml}</span>
 		</li>
 	</tal:block>
 	<tal:block tal:condition="configuration/getShowAddress">
@@ -58,15 +58,15 @@
 			<strong tal:content="trans:m.contactcard.frontoffice.address,ucf,lab"></strong>
 			<ul>
 				<li class="street-address">
-					${contact/getAddress1AsHtml}
+					${structure contact/getAddress1AsHtml}
 					<tal:block tal:condition="contact/getAddress2">
 						<br />
-						${contact/getAddress2AsHtml}
+						${structure contact/getAddress2AsHtml}
 					</tal:block>
 				</li>
-				<li tal:condition="contact/getZipcode" class="display-inline postal-code" tal:content="contact/getZipcodeAsHtml"/>
-				<li tal:condition="contact/getCity" class="display-inline locality" tal:content="contact/getCityAsHtml"/>
-				<li tal:condition="contact/getCountry" class="country-name" tal:content="contact/getCountryAsHtml"/>
+				<li tal:condition="contact/getZipcode" class="display-inline postal-code" tal:content="structure contact/getZipcodeAsHtml"/>
+				<li tal:condition="contact/getCity" class="display-inline locality" tal:content="structure contact/getCityAsHtml"/>
+				<li tal:condition="contact/getCountry" class="country-name" tal:content="structure contact/getCountryAsHtml"/>
 			</ul>
 		</li>
 	</tal:block>
