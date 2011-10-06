@@ -2,16 +2,16 @@
 	<li class="contact-not-published" tal:condition="contactNotPublished" tal:content="trans:m.contactcard.bo.general.contactnotpublished,ucf"></li>
 	<li class="float-right" tal:condition="configuration/getShowPhoto">
 		<a tal:condition="configuration/getShowLinkToDetail" change:link="tag contextual_website_website_modules_contactcard_contact ; contactcardParam[cmpref] contact/getId">
-			<img tal:condition="contact/getLastname" class="fn" change:media="document contact/getPhoto; format 'modules.contactcard.frontoffice/detailvisual'; alt contact/getLastname" />
-			<img tal:condition="not: contact/getLastname" class="fn" change:media="document contact/getPhoto; format 'modules.contactcard.frontoffice/detailvisual'; alt contact/getName" />
+			<img tal:condition="contact/getLastname" class="photo" change:media="document contact/getPhoto; format 'modules.contactcard.frontoffice/detailvisual'; alt contact/getLastname" />
+			<img tal:condition="not: contact/getLastname" class="photo" change:media="document contact/getPhoto; format 'modules.contactcard.frontoffice/detailvisual'; alt contact/getName" />
 		</a>
 		<tal:block tal:condition="not:configuration/getShowLinkToDetail">
-			<img tal:condition="contact/getLastname" class="fn" change:media="document contact/getPhoto; format 'modules.contactcard.frontoffice/detailvisual'; alt contact/getLastname" />
-			<img tal:condition="not: contact/getLastname" class="fn" change:media="document contact/getPhoto; format 'modules.contactcard.frontoffice/detailvisual'; alt contact/getName" />
+			<img tal:condition="contact/getLastname" class="photo" change:media="document contact/getPhoto; format 'modules.contactcard.frontoffice/detailvisual'; alt contact/getLastname" />
+			<img tal:condition="not: contact/getLastname" class="photo" change:media="document contact/getPhoto; format 'modules.contactcard.frontoffice/detailvisual'; alt contact/getName" />
 		</tal:block>
 	</li>
 	<li>
-		<h4 tal:condition="contact/getLastname" class="fn">
+		<h4 tal:condition="contact/getLastname" class="fn n">
 			<a tal:condition="configuration/getShowLinkToDetail" change:link="tag contextual_website_website_modules_contactcard_contact ; contactcardParam[cmpref] contact/getId">		
 				<strong>
 					<span tal:condition="contact/getTitle" class="honorific-prefix">${contact/getTitle/getLabel}</span>
