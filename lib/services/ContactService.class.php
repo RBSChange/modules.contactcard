@@ -95,7 +95,7 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 		{
 			try 
 			{
-				$website = website_WebsiteModuleService::getInstance()->getCurrentWebsite();
+				$website = website_WebsiteService::getInstance()->getCurrentWebsite();
 				return TagService::getInstance()->getDocumentByContextualTag('contextual_website_website_modules_contactcard_contact', $website);
 			}
 			catch (Exception $e)
@@ -189,7 +189,7 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 	{
 		try
 		{
-			$ws = website_WebsiteModuleService::getInstance();
+			$ws = website_WebsiteService::getInstance();
 			$page = TagService::getInstance()->getDocumentByContextualTag('contextual_website_website_modules_contactcard_page-contact', $ws->getCurrentWebsite());
 			if ($page->isPublished())
 			{
