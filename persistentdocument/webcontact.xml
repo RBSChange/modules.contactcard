@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/1.0.xsd" 
-    model-version="1.0" icon="contactcard" publish-on-day-change="false" backoffice-indexable="false" has-url="false">
-	<properties>
-		<add name="address1" type="LongString"/>
-		<add name="address2" type="LongString"/>
-		<add name="zipcode" type="String"/>
-		<add name="city" type="String"/>
-		<add name="country" type="String"/>
-		<add name="title" type="modules_list/item"	min-occurs="0" max-occurs="1" from-list="modules_contactcard/title" />
-		<add name="lastname" type="String"/>
-		<add name="firstname" type="String"/>
-		<add name="phone" type="String" localized="true"/>
-		<add name="fax" type="String" localized="true"/>
-		<add name="mails" type="LongString" min-occurs="1" max-occurs="1">
-			<constraints>emails:true</constraints>
-		</add>
-	</properties>
-	<statuses default="PUBLICATED" />
+<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/4.0.xsd" model-version="1.0" icon="contactcard" publish-on-day-change="false" backoffice-indexable="false" has-url="false">
+  <properties>
+    <property name="address1" type="LongString"/>
+    <property name="address2" type="LongString"/>
+    <property name="zipcode" type="String"/>
+    <property name="city" type="String"/>
+    <property name="country" type="String"/>
+    <property name="title" type="modules_list/item" min-occurs="0" max-occurs="1" from-list="modules_contactcard/title"/>
+    <property name="lastname" type="String"/>
+    <property name="firstname" type="String"/>
+    <property name="phone" type="String" localized="true"/>
+    <property name="fax" type="String" localized="true"/>
+    <property name="mails" type="LongString" min-occurs="1" max-occurs="1">
+      <constraint name="emails"/>
+    </property>
+  </properties>
+  <statuses default="PUBLICATED"/>
 </document>
