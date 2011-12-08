@@ -1,12 +1,10 @@
 <?php
 /**
- * contactcard_persistentdocument_contact
  * @package contactcard
  */
 class contactcard_persistentdocument_contact extends contactcard_persistentdocument_contactbase implements form_FormReceiver
 {
 	/**
-	 * @see f_persistentdocument_PersistentDocumentImpl::getTreeNodeLabel()
 	 * @return String
 	 */
 	function getTreeNodeLabel()
