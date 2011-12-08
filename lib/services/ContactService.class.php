@@ -147,32 +147,32 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 	}
 	
 	/**
- 	 * @param contactcard_persistentdocument_contact $document
+	 * @param contactcard_persistentdocument_contact $document
+	 * @param array<string, string> $attributes
+	 * @param integer $mode
 	 * @param string $moduleName
-	 * @param string $treeType
-	 * @param array<string, string> $nodeAttributes
 	 */
-	public function addTreeAttributes($document, $moduleName, $treeType, &$nodeAttributes)
+	public function completeBOAttributes($document, &$attributes, $mode, $moduleName)
 	{
-		$nodeAttributes['label'] = $document->getTreeNodeLabel();
-		if ($treeType == 'wmultilist')
+		$attributes['label'] = $document->getTreeNodeLabel();
+		if ($mode & DocumentHelper::MODE_RESOURCE)
 		{
 			try
 			{
-				$content = f_Locale::translate('&modules.contactcard.frontoffice.Contactnamed;', array("name" => $nodeAttributes['label']));
-			$nodeAttributes['htmllink'] = '<a class="link" href="#" rel="cmpref:' . $document->getId() . '" lang="' . $document->getLang() . '">' . htmlspecialchars($content, ENT_NOQUOTES, 'UTF-8') . '</a>';
+				$content = f_Locale::translate('&modules.contactcard.frontoffice.Contactnamed;', array("name" => $attributes['label']));
+				$attributes['htmllink'] = '<a class="link" href="#" rel="cmpref:' . $document->getId() . '" lang="' . $document->getLang() . '">' . htmlspecialchars($content, ENT_NOQUOTES, 'UTF-8') . '</a>';
 			}
 			catch (Exception $e)
 			{
 				Framework::exception($e);
 			}
 		}
-		else if ($treeType == 'wlist')
+		if ($mode & DocumentHelper::MODE_CUSTOM)
 		{
 			$picture = $document->getPhoto();
 			if ($picture !== null)
 			{
-				$nodeAttributes['thumbnailsrc'] = MediaHelper::getPublicFormatedUrl($picture, "modules.uixul.backoffice/thumbnaillistitem");
+				$attributes['thumbnailsrc'] = MediaHelper::getPublicFormatedUrl($picture, "modules.uixul.backoffice/thumbnaillistitem");
 			}
 		}
 	}
