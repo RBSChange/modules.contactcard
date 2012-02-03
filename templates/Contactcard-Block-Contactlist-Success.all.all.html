@@ -1,33 +1,31 @@
-<div change:paginator="contacts"></div>
+<h1 change:h="">${trans:m.contactcard.frontoffice.contact-list,ucf}</h1>
 
-<p class="normal">
-	<strong change:translate="modules.contactcard.frontoffice.Order-by"></strong>
-	<a tal:condition="php: orderBy != 'label'" change:currentPageLink="contactcardParam[orderBy] 'label'; contactcardParam[page] '1'"
-		change:translate="modules.contactcard.document.contact.label"></a>
-	<span tal:condition="php: orderBy == 'label'"
-		change:translate="modules.contactcard.document.contact.label"></span>.
-	<br/>
-	<strong change:translate="modules.contactcard.frontoffice.Order-by-direction"></strong>
-	<a tal:condition="php: orderByDirection != 'asc'" change:currentPageLink="contactcardParam[orderByDirection] 'asc'; contactcardParam[page] '1'"
-		change:translate="modules.contactcard.frontoffice.order-by-asc"></a>
-	<span tal:condition="php: orderByDirection == 'asc'"
-		change:translate="modules.contactcard.frontoffice.order-by-asc"></span>
-	|
-	<a tal:condition="php: orderByDirection != 'desc'" change:currentPageLink="contactcardParam[orderByDirection] 'desc'; contactcardParam[page] '1'"
-		change:translate="modules.contactcard.frontoffice.order-by-desc"></a>
-	<span tal:condition="php: orderByDirection == 'desc'"
-		change:translate="modules.contactcard.frontoffice.order-by-desc"></span>.
-	<br/>
-</p>
-<!-- Filters : -->
+<dl class="normal-margin inline-list">
+	<dt>${trans:m.contactcard.frontoffice.order-by,ucf}</dt>
+	<tal:block tal:condition="php: orderByDirection != 'asc'">
+		<dd><a change:currentPageLink="contactcardParam[orderByDirection] 'asc'; contactcardParam[page] '1'">${trans:m.contactcard.frontoffice.label-asc}</a><span class="punctuation">, </span></dd>
+		<dd><span tal:condition="php: orderByDirection == 'desc'">${trans:m.contactcard.frontoffice.label-desc}</span></dd>
+	</tal:block>
+	<tal:block tal:condition="php: orderByDirection != 'desc'">
+		<dd><span tal:condition="php: orderByDirection == 'asc'">${trans:m.contactcard.frontoffice.label-asc}</span><span class="punctuation">, </span></dd>
+		<dd><a change:currentPageLink="contactcardParam[orderByDirection] 'desc'; contactcardParam[page] '1'">${trans:m.contactcard.frontoffice.label-desc}</a></dd>
+	</tal:block>
+</dl>
 	
 <form change:form="" method="get" tal:condition="configuration/getShowFilters"> 
-	<fieldset name="affine"><legend for="affine">Affiner la liste des contacts</legend>
-		<input change:selectinput="name companyname" label="&modules.contactcard.frontoffice.office;" listId="modules_contactcard/companyname" tal:condition="configuration/getShowCompanynamesFilter"/>
-		<br/><br/>
-		<input change:selectinput="name functions" label="&modules.contactcard.frontoffice.function;" listId="modules_contactcard/functions" tal:condition="configuration/getShowFunctionsFilter"/>
-		<br/><br/>
-		<input name="Filter" change:submit="label &modules.contactcard.frontoffice.submit;"  />
+	<fieldset>
+		<legend class="h-2">${trans:m.contactcard.frontoffice.refine-the-search,ucf}</legend>
+		<ol>
+			<li tal:condition="configuration/getShowCompanynamesFilter">
+				<input change:selectinput="name companyname" labeli18n="m.contactcard.frontoffice.office" listId="modules_contactcard/companyname" />
+			</li>
+			<li tal:condition="configuration/getShowFunctionsFilter">
+				<input change:selectinput="name functions" labeli18n="m.contactcard.frontoffice.function" listId="modules_contactcard/functions" />
+			</li>
+		</ol>
+		<p class="buttons">
+			<input name="Filter" change:submit="labelu18n m.contactcard.frontoffice.submit" />
+		</p>
 	</fieldset>
 </form>
 
@@ -39,4 +37,4 @@
 	</ol>	
 	<div change:paginator="contacts"></div>
 </tal:block>
-<p tal:condition="not:contacts/count" change:translate="modules.contactcard.frontoffice.No-contact ; companyname companyname ; functions functions"></p>
+<p tal:condition="not:contacts/count">${trans:m.contactcard.frontoffice.no-contact,ucf,companyname=companyname,functions=functions}</p>

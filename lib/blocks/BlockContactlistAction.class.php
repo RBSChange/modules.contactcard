@@ -16,21 +16,22 @@ class contactcard_BlockContactlistAction extends website_BlockAction
 	{
 		$restrictions = array();
 		$orders = array();
-		if ($request->hasNonEmptyParameter("companyname"))
+				
+		if ($request->hasNonEmptyParameter('companyname'))
 		{
-			$restrictions[] = Restrictions::eq('name', $request->getParameter("companyname"));
+			$restrictions[] = Restrictions::eq('name', $request->getParameter('companyname'));
 		}
-		if ($request->hasNonEmptyParameter("functions"))
+		if ($request->hasNonEmptyParameter('functions'))
 		{
-			$restrictions[] = Restrictions::eq('function',$request->getParameter("functions"));
+			$restrictions[] = Restrictions::eq('function', $request->getParameter('functions'));
 		}
 		
 		$orderProperty = $this->getParameterOrSetDefault($request, 'orderBy', 'label');
 		$orderDirection = $this->getParameterOrSetDefault($request, 'orderByDirection', 'asc');	
 		$orders[] = Order::byString($orderProperty, $orderDirection);
 		$contacts = contactcard_ContactService::getInstance()->getPublishedFiltered($restrictions, $orders);
-		$function = $request->getParameter("functions");
-		$companyname = $request->getParameter("companyname");
+		$function = $request->getParameter('functions');
+		$companyname = $request->getParameter('companyname');
 		$this->preparePaginator($request, $contacts);
 		return website_BlockView::SUCCESS;
 	}
@@ -70,8 +71,7 @@ class contactcard_BlockContactlistAction extends website_BlockAction
 		if ($request->hasParameter($paramName))
 		{
 			return $request->getParameter($paramName);
-		}
-		
+		}		
 		$request->setAttribute($paramName, $defaultValue);
 		return $defaultValue;
 	}

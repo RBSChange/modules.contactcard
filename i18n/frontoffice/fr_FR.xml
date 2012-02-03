@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.contactcard.frontoffice" lcid="fr_FR">
-  <key id="office">société</key>
-  <key id="function">fonction</key>
-  <key id="phone">téléphone</key>
-  <key id="post">poste</key>
-  <key id="address">adresse</key>
-  <key id="contact">contact</key>
-  <key id="fax">fax</key>
-  <key id="contactme">envoyer un mail à ce contact</key>
-  <key id="contactnamed">envoyer un mail à {name}</key>
-  <key id="order-by">Trier par</key>
-  <key id="order-by-direction">Et par</key>
-  <key id="order-by-asc">ordre croissant</key>
-  <key id="order-by-desc">ordre décroissant</key>
-  <key id="submit">Appliquer les filtres</key>
-  <key id="no-contact">Désolé, il n'y a personne dans le trombinoscope ayant la fonction {functions} dans la société {companyname}.</key>
+	<key id="office">société</key>
+	<key id="function">fonction</key>
+	<key id="phone">téléphone</key>
+	<key id="post">poste</key>
+	<key id="address">adresse</key>
+	<key id="contact">contact</key>
+	<key id="fax">fax</key>
+	<key id="contactme">envoyer un mail à ce contact</key>
+	<key id="contactnamed">envoyer un mail à {name}</key>
+	<key id="order-by">Trier par</key>
+	<key id="order-by-direction">Et par</key>
+	<key id="order-by-asc">ordre croissant</key>
+	<key id="order-by-desc">ordre décroissant</key>
+	<key id="submit">Appliquer les filtres</key>
+	<key id="no-contact">Désolé, il n'y a personne dans le trombinoscope ayant la fonction {functions} dans la société {companyname}.</key>
+	<key id="label-asc">libellé croissant</key>
+	<key id="label-desc">libellé décroissant</key>
+	<key id="contact-list">liste des contacts</key>
+	<key id="refine-the-search">affiner la recherche</key>
 </i18n>
