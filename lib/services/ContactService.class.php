@@ -197,6 +197,46 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 		return f_util_HtmlUtils::buildLink($attributes, $content);
 	}
 	
+	/**
+	 * @param notification_persistentdocument_notification $notification
+	 * @param contactcard_persistentdocument_contact $contact
+	 */
+	public function registerNotificationCallback($notification, $contact)
+	{
+		if ($notification === null)
+		{
+			if (Framework::isInfoEnabled())
+			{
+				Framework::info(__METHOD__ . ' No notification to send.');
+			}
+			return;
+		}
+		else if ($contact === null)
+		{
+			if (Framework::isInfoEnabled())
+			{
+				Framework::info(__METHOD__ . ' No contact to send notification.');
+			}
+			return;
+		}
+		$notification->registerCallback($this, 'getNotificationParameters', $contact);
+	}
+	
+	/**
+	 * @param contactcard_persistentdocument_contact $contact
+	 * @return array
+	 */
+	public function getNotificationParameters($contact)
+	{
+		return array(
+			'receiverFirstName' => $contact->getFirstnameAsHtml(),
+			'receiverLastName' => $contact->getLastnameAsHtml(),
+			'receiverFullName' => $contact->getFirstnameAsHtml() . ' ' . $contact->getLastnameAsHtml(),
+			'receiverTitle' => ($contact->getTitle()) ? $contact->getTitle()->getLabelAsHtml() : ''
+		);
+	}
+	
+	
 	// Deprecated.
 
 	/**
