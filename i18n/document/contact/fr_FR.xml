@@ -25,4 +25,7 @@
   <key id="firstname">prénom</key>
   <key id="communicationlanguage">langue de communication</key>
   <key id="indexingstatus">indexation</key>
+  <key id="websiteurl">URL du site  web</key>
+  <key id="allowcontact">activer le lien de contact</key>
+  <key id="contactpage">page de contact</key>
 </i18n>

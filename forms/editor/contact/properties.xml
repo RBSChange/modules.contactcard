@@ -8,6 +8,8 @@
 		<field name="function" hidehelp="true" />
 		<field name="photo" hidehelp="true" allowfile="true" mediafoldername="Inbox"/>
 		<field name="communicationlanguage" hidehelp="true" />
+		<field name="allowcontact" hidehelp="true" />
+		<field name="contactpage" hidehelp="true" moduleselector="website" allow="hasUrl"  />
 		<field name="mails" />
 		<field name="indexingstatus" hidehelp="true" />
 	</section>
@@ -18,9 +20,10 @@
 		<field name="city" hidehelp="true" />
 		<field name="country" hidehelp="true" />
 	</section>
-	<section labeli18n="modules.contactcard.bo.doceditor.fieldsgroup.Phone" class="toggle" image="{IconsBase}/small/phone.png" hidden="true">
+	<section labeli18n="modules.contactcard.bo.doceditor.fieldsgroup.Phone" class="toggle" image="{IconsBase}/small/misc.png" hidden="true">
 		<field name="phone" hidehelp="true" />
 		<field name="post" />
 		<field name="fax" hidehelp="true" />
+		<field name="websiteurl" hidehelp="true" />
 	</section>
 </panel>

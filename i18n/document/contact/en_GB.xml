@@ -25,4 +25,7 @@
   <key id="indexingstatus">indexing</key>
   <key id="document-name">contact card</key>
   <key id="label">label</key>
+  <key id="websiteurl">website URL</key>
+  <key id="allowcontact">enable contact link</key>
+  <key id="contactpage">contact page</key>
 </i18n>

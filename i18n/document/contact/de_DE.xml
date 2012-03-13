@@ -25,4 +25,7 @@
   <key id="firstname">Vorname</key>
   <key id="communicationlanguage">Sprache</key>
   <key id="indexingstatus">Indexierung</key>
+  <key id="websiteurl">URL der Webseite URL</key>
+  <key id="allowcontact">Kontakt aktivieren</key>
+  <key id="contactpage">contact page</key>
 </i18n>

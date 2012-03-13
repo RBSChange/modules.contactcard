@@ -7,6 +7,7 @@
 	<key id="address">adresse</key>
 	<key id="contact">contact</key>
 	<key id="fax">fax</key>
+	<key id="website">site web</key>
 	<key id="contactme">envoyer un mail à ce contact</key>
 	<key id="contactnamed">envoyer un mail à {name}</key>
 	<key id="order-by">Trier par</key>
