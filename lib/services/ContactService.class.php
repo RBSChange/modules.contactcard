@@ -236,7 +236,22 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 		);
 	}
 	
-	
+	/**
+	 * @param contactcard_persistentdocument_contact $document
+	 * @return string
+	 */
+	public function getTreeNodeLabel($document)
+	{
+		if ($document->getLastname() === null)
+		{
+			return $document->getName();
+		}
+		else
+		{
+			return $document->getLastname() . ' ' . $document->getFirstname();
+		}
+	}
+
 	// Deprecated.
 
 	/**

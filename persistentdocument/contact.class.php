@@ -6,22 +6,6 @@
 class contactcard_persistentdocument_contact extends contactcard_persistentdocument_contactbase implements indexer_IndexableDocument, form_FormReceiver
 {
 	/**
-	 * @see f_persistentdocument_PersistentDocumentImpl::getTreeNodeLabel()
-	 * @return String
-	 */
-	function getTreeNodeLabel()
-	{
-		if (is_null($this->getLastname()))
-		{
-			return $this->getName();
-		}
-		else
-		{
-			return $this->getLastname() . ' ' . $this->getFirstname();
-		}
-	}
-	
-	/**
 	 * Get the indexable document
 	 *
 	 * @return indexer_IndexedDocument
