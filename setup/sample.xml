@@ -11,16 +11,16 @@
 	</rootfolder>
 
 	<website byTag="default_modules_website_default-website">
-		<topic label="Outils" byLabel="Outils">
-			<page label="Contact" navigationVisibility="hidden" indexingstatus="false" >
-				<tag name="contextual_website_website_modules_contactcard_contact" />
+		<topic byLabel="Outils">
+			<page label="Contact" navigationVisibility="hidden" indexingstatus="false"
+				byTag="contextual_website_website_modules_contactcard_contact">
 				<changecontent for="content-block">
 					<changeblock type="modules_contactcard_contact" />
 				</changecontent>
 			</page>
 
-			<page label="Envoyer un mail à ce contact" navigationVisibility="hidden" indexingstatus="false" >
-				<tag name="contextual_website_website_modules_contactcard_page-contact" />
+			<page label="Envoyer un mail à ce contact" navigationVisibility="hidden" indexingstatus="false"
+				byTag="contextual_website_website_modules_contactcard_page-contact">
 				<changecontent for="content-block">
 					<changeblock type="richtext">
 						<![CDATA[<h2 class="heading-two">Mettre ici le formulaire de contact</h2>]]>
@@ -28,11 +28,18 @@
 				</changecontent>
 			</page>
 		</topic>
+		<topic byLabel="Liste des contacts">
+			<page byLabel="Liste des contacts" navigationVisibility="hidden" indexingstatus="false" isIndexPage="true">
+				<changecontent for="content-block">
+					<changeblock type="modules_contactcard_contactlist" />
+				</changecontent>
+			</page>
+		</topic>
 	</website>
 	
 	<rootfolder module="contactcard">
-		<folder label="Exemples" byLabel="Exemples">
-			<contact name="RBS"
+		<folder byLabel="Exemples">
+			<contact byName="RBS"
 				 titlestr="M."
 				 firstname="RBS"
 				 lastname="Change"
@@ -49,9 +56,7 @@
 				 zipcode="67836"
 				 city="Strasbourg – Entzheim"
 				 country="france"
-				 
-				 indexingstatus="false"
-			/>
+				 indexingstatus="false" />
 		</folder>
 	</rootfolder>
 </script>

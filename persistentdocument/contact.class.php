@@ -5,21 +5,6 @@
 class contactcard_persistentdocument_contact extends contactcard_persistentdocument_contactbase implements form_FormReceiver
 {
 	/**
-	 * @return String
-	 */
-	function getTreeNodeLabel()
-	{
-		if (is_null($this->getLastname()))
-		{
-			return $this->getName();
-		}
-		else
-		{
-			return $this->getLastname() . ' ' . $this->getFirstname();
-		}
-	}
-	
-	/**
 	 * @return array
 	 */
 	public function getEmailAddresses()

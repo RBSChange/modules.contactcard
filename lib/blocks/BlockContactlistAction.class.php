@@ -6,8 +6,6 @@
 class contactcard_BlockContactlistAction extends website_BlockAction
 {
 	/**
-	 * @see website_BlockAction::execute()
-	 *
 	 * @param f_mvc_Request $request
 	 * @param f_mvc_Response $response
 	 * @return String
@@ -16,28 +14,28 @@ class contactcard_BlockContactlistAction extends website_BlockAction
 	{
 		$restrictions = array();
 		$orders = array();
-		if ($request->hasNonEmptyParameter("companyname"))
+		if ($request->hasNonEmptyParameter('companyname'))
 		{
-			$restrictions[] = Restrictions::eq('name', $request->getParameter("companyname"));
+			$restrictions[] = Restrictions::eq('name', $request->getParameter('companyname'));
 		}
-		if ($request->hasNonEmptyParameter("functions"))
+		if ($request->hasNonEmptyParameter('functions'))
 		{
-			$restrictions[] = Restrictions::eq('function',$request->getParameter("functions"));
+			$restrictions[] = Restrictions::eq('function', $request->getParameter('functions'));
 		}
 		
 		$orderProperty = $this->getParameterOrSetDefault($request, 'orderBy', 'label');
 		$orderDirection = $this->getParameterOrSetDefault($request, 'orderByDirection', 'asc');	
 		$orders[] = Order::byString($orderProperty, $orderDirection);
 		$contacts = contactcard_ContactService::getInstance()->getPublishedFiltered($restrictions, $orders);
-		$function = $request->getParameter("functions");
-		$companyname = $request->getParameter("companyname");
+		$function = $request->getParameter('functions');
+		$companyname = $request->getParameter('companyname');
 		$this->preparePaginator($request, $contacts);
 		return website_BlockView::SUCCESS;
 	}
 	
 	/**
-	 * @param request
-	 * @param contacts
+	 * @param f_mvc_Request $request
+	 * @param contactcard_persistentdocument_contact[] $contacts
 	 */
 	private function preparePaginator($request, $contacts) 
 	{
@@ -48,13 +46,11 @@ class contactcard_BlockContactlistAction extends website_BlockAction
 	}
 	
 	/**
-	 * @see website_BlockAction::execute()
-	 *
 	 * @param f_mvc_Request $request
 	 * @param f_mvc_Response $response
-	 * @return String
+	 * @return string
 	 */
-	function executeFilter($request, $response)
+	public function executeFilter($request, $response)
 	{
 		return $this->execute($request, $response);
 	}
@@ -71,7 +67,6 @@ class contactcard_BlockContactlistAction extends website_BlockAction
 		{
 			return $request->getParameter($paramName);
 		}
-		
 		$request->setAttribute($paramName, $defaultValue);
 		return $defaultValue;
 	}

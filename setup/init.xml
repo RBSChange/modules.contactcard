@@ -9,7 +9,7 @@
 		<form formid="modules_contactcard/contact"
 			  label="envoyer un e-mail au contact" submitButton="Envoyer" 
 			  confirmMessage="votre message a été envoyé"
-			  markup="default" useBackLink="true" messageSendingType="2" useCaptcha="false">	
+			  markup="default" useBackLink="true" useCaptcha="false">	
 			
 			<fieldtext fieldName="lastname" label="Nom" 
 				required="true" multiline="false" cols="50" maxlength="255" 

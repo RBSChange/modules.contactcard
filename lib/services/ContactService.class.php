@@ -205,6 +205,61 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 	}
 	
 	/**
+	 * @param notification_persistentdocument_notification $notification
+	 * @param contactcard_persistentdocument_contact $contact
+	 */
+	public function registerNotificationCallback($notification, $contact)
+	{
+		if ($notification === null)
+		{
+			if (Framework::isInfoEnabled())
+			{
+				Framework::info(__METHOD__ . ' No notification to send.');
+			}
+			return;
+		}
+		else if ($contact === null)
+		{
+			if (Framework::isInfoEnabled())
+			{
+				Framework::info(__METHOD__ . ' No contact to send notification.');
+			}
+			return;
+		}
+		$notification->registerCallback($this, 'getNotificationParameters', $contact);
+	}
+	
+	/**
+	 * @param contactcard_persistentdocument_contact $contact
+	 * @return array
+	 */
+	public function getNotificationParameters($contact)
+	{
+		return array(
+			'receiverFirstName' => $contact->getFirstnameAsHtml(),
+			'receiverLastName' => $contact->getLastnameAsHtml(),
+			'receiverFullName' => $contact->getFirstnameAsHtml() . ' ' . $contact->getLastnameAsHtml(),
+			'receiverTitle' => ($contact->getTitle()) ? $contact->getTitle()->getLabelAsHtml() : ''
+		);
+	}
+	
+	/**
+	 * @param contactcard_persistentdocument_contact $document
+	 * @return string
+	 */
+	public function getTreeNodeLabel($document)
+	{
+		if ($document->getLastname() === null)
+		{
+			return $document->getName();
+		}
+		else
+		{
+			return $document->getLastname() . ' ' . $document->getFirstname();
+		}
+	}
+	
+	/**
 	 * @param indexer_IndexedDocument $indexedDocument
 	 * @param contactcard_persistentdocument_contact $document
 	 * @param indexer_IndexService $indexService

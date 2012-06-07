@@ -8,6 +8,8 @@
 		<field name="function" hidehelp="true" />
 		<field name="photo" hidehelp="true" />
 		<field name="communicationlanguage" hidehelp="true" />
+		<field name="allowcontact" hidehelp="true" />
+		<field name="contactpage" hidehelp="true" moduleselector="website" allow="hasUrl"  />
 		<field name="mails" />
 		<field name="indexingstatus" hidehelp="true" />
 	</section>
@@ -22,5 +24,6 @@
 		<field name="phone" hidehelp="true" />
 		<field name="post" />
 		<field name="fax" hidehelp="true" />
+		<field name="websiteurl" hidehelp="true" />
 	</section>
 </panel>

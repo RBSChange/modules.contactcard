@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/4.0.xsd" model-version="1.0" icon="contactcard" indexable="true" publish-on-day-change="false" backoffice-indexable="true">
-  <properties>
-    <property name="name" type="String" localized="true" indexed="description"/>
-    <property name="address1" type="LongString"/>
-    <property name="address2" type="LongString"/>
-    <property name="zipcode" type="String"/>
-    <property name="city" type="String"/>
-    <property name="country" type="String"/>
-    <property name="communicationlanguage" type="String" min-occurs="1" max-occurs="1" from-list="modules_contactcard/languages" default-value="fr" indexed="none"/>
-    <property name="title" type="modules_list/item" min-occurs="0" max-occurs="1" from-list="modules_contactcard/title"/>
-    <property name="lastname" type="String"/>
-    <property name="firstname" type="String"/>
-    <property name="function" type="String" localized="true"/>
-    <property name="photo" type="modules_media/media"/>
-    <property name="phone" type="String" localized="true" indexed="none"/>
-    <property name="post" type="String" localized="true" indexed="none"/>
-    <property name="fax" type="String" localized="true" indexed="none"/>
-    <property name="mails" type="LongString" min-occurs="1" max-occurs="1" indexed="none">
-      <constraint name="emails"/>
-    </property>
-    <property name="indexingstatus" type="Boolean" default-value="true"/>
-  </properties>
+<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/4.0.xsd"
+	model-version="1.0" icon="contactcard" indexable="true" publish-on-day-change="false" backoffice-indexable="true">
+	<properties>
+		<property name="name" type="String" localized="true" indexed="description" />
+		<property name="address1" type="LongString" />
+		<property name="address2" type="LongString" />
+		<property name="zipcode" type="String" />
+		<property name="city" type="String" />
+		<property name="country" type="String" />
+		<property name="communicationlanguage" type="String" min-occurs="1" from-list="modules_contactcard/languages" default-value="fr"
+			indexed="none" />
+		<property name="title" type="modules_list/item" from-list="modules_contactcard/title" />
+		<property name="lastname" type="String" />
+		<property name="firstname" type="String" />
+		<property name="function" type="String" localized="true" />
+		<property name="photo" type="modules_media/media" />
+		<property name="phone" type="String" localized="true" indexed="none" />
+		<property name="post" type="String" localized="true" indexed="none" />
+		<property name="fax" type="String" localized="true" indexed="none" />
+		<property name="mails" type="LongString" min-occurs="1" indexed="none">
+			<constraint name="emails" />
+		</property>
+		<property name="indexingstatus" type="Boolean" default-value="true" />
+		<property name="websiteurl" type="String" indexed="none">
+			<constraint name="url" />
+		</property>
+		<property name="allowcontact" type="Boolean" />
+		<property name="contactpage" type="modules_generic/Document" />
+	</properties>
 </document>

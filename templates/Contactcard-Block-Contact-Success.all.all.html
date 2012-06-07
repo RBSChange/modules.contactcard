@@ -1,5 +1,5 @@
 <ol class="vcard">
-	<li class="contact-not-published" tal:condition="contactNotPublished" tal:content="trans:m.contactcard.bo.general.contactnotpublished,ucf"></li>
+	<li class="contact-not-published" tal:condition="contactNotPublished">${trans:m.contactcard.bo.general.contactnotpublished,ucf}</li>
 	<li class="float-right" tal:condition="configuration/getShowPhoto">
 		<a tal:condition="configuration/getShowLinkToDetail" change:link="tag contextual_website_website_modules_contactcard_contact ; contactcardParam[cmpref] contact/getId">
 			<img tal:condition="contact/getLastname" class="photo" change:media="document contact/getPhoto; format 'modules.contactcard.frontoffice/detailvisual'; alt contact/getLastname" />
@@ -29,33 +29,38 @@
 	</li>
 	<tal:block tal:condition="configuration/getShowCompanyInfos">
 		<li tal:condition="php: contact.getName() && contact.getLastname()">
-			<strong tal:content="trans:m.contactcard.frontoffice.office,ucf,lab"></strong>
+			<strong>${trans:m.contactcard.frontoffice.office,ucf,lab}</strong>
 			<span class="org">${contact/getName}</span>
 		</li>
 		<li tal:condition="contact/getFunction">
-			<strong tal:content="trans:m.contactcard.frontoffice.function,ucf,lab"></strong>
+			<strong>${trans:m.contactcard.frontoffice.function,ucf,lab}</strong>
 			<span class="title">${contact/getFunction}</span>
 		</li>
 	</tal:block>	
 	<tal:block tal:condition="configuration/getShowTelephoneNumber">
 		<li tal:condition="contact/getPhone" class="tel">
-			<strong tal:content="trans:m.contactcard.frontoffice.phone,ucf,lab"></strong>
+			<strong>${trans:m.contactcard.frontoffice.phone,ucf,lab}</strong>
 			<span class="type display-none">work</span>
 			<span class="value">${structure contact/getPhoneAsHtml}</span>
 		</li>
 		<li tal:condition="contact/getPost">
-			<strong tal:content="trans:m.contactcard.frontoffice.post,ucf,lab"></strong>
+			<strong>${trans:m.contactcard.frontoffice.post,ucf,lab}</strong>
 			${structure contact/getPostAsHtml}
 		</li>
 		<li tal:condition="contact/getFax" class="tel">
-			<strong tal:content="trans:m.contactcard.frontoffice.fax,ucf,lab"></strong>
+			<strong>${trans:m.contactcard.frontoffice.fax,ucf,lab}</strong>
 			<span class="type display-none">fax</span>
 			<span class="value">${structure contact/getFaxAsHtml}</span>
+		</li>
+		<li tal:condition="contact/getWebsiteurl" class="website">
+			<strong>${trans:m.contactcard.frontoffice.website,ucf,lab}</strong>
+			<span class="type display-none">website</span>
+			<a href="${contact/getWebsiteurl}" class="link">${contact/getWebsiteurl}</a>
 		</li>
 	</tal:block>
 	<tal:block tal:condition="configuration/getShowAddress">
 		<li tal:condition="contact/hasAddressInformations" class="address adr">
-			<strong tal:content="trans:m.contactcard.frontoffice.address,ucf,lab"></strong>
+			<strong>${trans:m.contactcard.frontoffice.address,ucf,lab}</strong>
 			<ul>
 				<li class="street-address">
 					${structure contact/getAddress1AsHtml}
@@ -64,16 +69,19 @@
 						${structure contact/getAddress2AsHtml}
 					</tal:block>
 				</li>
-				<li tal:condition="contact/getZipcode" class="display-inline postal-code" tal:content="structure contact/getZipcodeAsHtml"/>
-				<li tal:condition="contact/getCity" class="display-inline locality" tal:content="structure contact/getCityAsHtml"/>
-				<li tal:condition="contact/getCountry" class="country-name" tal:content="structure contact/getCountryAsHtml"/>
+				<li tal:condition="contact/getZipcode" class="display-inline postal-code">${contact/getZipcodeAsHtml}</li>
+				<li tal:condition="contact/getCity" class="display-inline locality">${contact/getCityAsHtml}</li>
+				<li tal:condition="contact/getCountry" class="country-name">${contact/getCountryAsHtml}</li>
 			</ul>
 		</li>
 	</tal:block>
 	<li tal:condition="configuration/getShowContactpageLink">
-		<strong tal:content="trans:m.contactcard.frontoffice.contact,ucf,lab"></strong>
-		<span>
-			<a change:link="tag contextual_website_website_modules_contactcard_page-contact ; contactcardParam[cmpref] contact/getId; formParam[receiverIds] contact/getId" class="link" tal:content="trans:m.contactcard.frontoffice.contactme,ucf"></a> 
-		</span>
+		<tal:block tal:condition="contact/getAllowcontact">
+			<strong>${trans:m.contactcard.frontoffice.contact,ucf,lab}</strong>
+			<span>
+				<a tal:condition="not: contact/getContactpage" change:link="tag contextual_website_website_modules_contactcard_page-contact ; contactcardParam[cmpref] contact/getId; formParam[receiverIds] contact/getId" class="link email">${trans:m.contactcard.frontoffice.contactme,ucf}</a> 
+				<a tal:condition="contact/getContactpage" change:link="document contact/getContactpage" class="link email">${trans:m.contactcard.frontoffice.contactme,ucf}</a> 
+			</span>
+		</tal:block>
 	</li>
 </ol>
