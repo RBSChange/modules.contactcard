@@ -3,12 +3,12 @@
 <dl class="normal-margin inline-list">
 	<dt>${trans:m.contactcard.frontoffice.order-by,ucf}</dt>
 	<tal:block tal:condition="php: orderByDirection != 'asc'">
-		<dd><a change:currentPageLink="contactcardParam[orderByDirection] 'asc'; contactcardParam[page] '1'">${trans:m.contactcard.frontoffice.label-asc}</a><span class="punctuation">, </span></dd>
+		<dd><a change:currentpagelink="contactcardParam[orderByDirection] 'asc'; contactcardParam[page] '1'">${trans:m.contactcard.frontoffice.label-asc}</a><span class="punctuation">, </span></dd>
 		<dd><span tal:condition="php: orderByDirection == 'desc'">${trans:m.contactcard.frontoffice.label-desc}</span></dd>
 	</tal:block>
 	<tal:block tal:condition="php: orderByDirection != 'desc'">
 		<dd><span tal:condition="php: orderByDirection == 'asc'">${trans:m.contactcard.frontoffice.label-asc}</span><span class="punctuation">, </span></dd>
-		<dd><a change:currentPageLink="contactcardParam[orderByDirection] 'desc'; contactcardParam[page] '1'">${trans:m.contactcard.frontoffice.label-desc}</a></dd>
+		<dd><a change:currentpagelink="contactcardParam[orderByDirection] 'desc'; contactcardParam[page] '1'">${trans:m.contactcard.frontoffice.label-desc}</a></dd>
 	</tal:block>
 </dl>
 
