@@ -8,7 +8,7 @@ class contactcard_BlockContactlistAction extends website_BlockAction
 	/**
 	 * @param f_mvc_Request $request
 	 * @param f_mvc_Response $response
-	 * @return String
+	 * @return string
 	 */
 	function execute($request, $response)
 	{

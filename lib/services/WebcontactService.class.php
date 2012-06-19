@@ -1,23 +1,10 @@
 <?php
+/**
+ * @package modules.contactcard
+ * @method contactcard_WebcontactService getInstance()
+ */
 class contactcard_WebcontactService extends f_persistentdocument_DocumentService
 {
-	/**
-	 * @var contactcard_WebcontactService
-	 */
-	private static $instance;
-
-	/**
-	 * @return contactcard_WebcontactService
-	 */
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
-
 	/**
 	 * @return contactcard_persistentdocument_webcontact
 	 */
@@ -32,6 +19,6 @@ class contactcard_WebcontactService extends f_persistentdocument_DocumentService
 	 */
 	public function createQuery()
 	{
-		return $this->pp->createQuery('modules_contactcard/webcontact');
+		return $this->getPersistentProvider()->createQuery('modules_contactcard/webcontact');
 	}
 }

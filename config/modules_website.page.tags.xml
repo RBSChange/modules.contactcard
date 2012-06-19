@@ -1,5 +1,5 @@
-<?xml version="1.0"?>
-<tags extends="generic">
+<?xml version="1.0" encoding="UTF-8"?>
+<tags>
 	<tag labeli18n="m.contactcard.bo.general.tag.contact-page" icon="form">contextual_website_website_modules_contactcard_page-contact</tag>
 	<tag labeli18n="m.contactcard.bo.tags.contact-block" icon="contactcard">contextual_website_website_modules_contactcard_contact</tag>
 </tags>

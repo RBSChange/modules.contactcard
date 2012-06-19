@@ -1,41 +1,22 @@
 <?php
+/**
+ * @method contactcard_ListLanguagesService getInstance()
+ */
 class contactcard_ListLanguagesService extends change_BaseService implements list_ListItemsService
 {
 	/**
-	 * @var contactcard_ListLanguagesService
-	 */
-	private static $instance;
-
-
-	/**
-	 * @return contactcard_ListLanguagesService
-	 */
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
-
-
-	/**
-	 * @return array
+	 * @return list_Item[]
 	 */
 	public function getItems()
 	{
 		$items = array();
+		$ls = LocaleService::getInstance();
+		$languages = RequestContext::getInstance()->getUISupportedLanguages();
 
-	    $languages = RequestContext::getInstance()->getUISupportedLanguages();
-
-	    foreach ($languages as $language)
-	    {
-	    	$items[] = new list_Item(
-                    f_Locale::translateUI('&modules.uixul.bo.languages.' . ucfirst($language) . ';'),
-                    $language
-                );
-	    }
+		foreach ($languages as $language)
+		{
+			$items[] = new list_Item($ls->trans('m.uixul.bo.languages.' . strtolower($language), array('ucf')),	$language);
+		}
 
 		return $items;
 	}

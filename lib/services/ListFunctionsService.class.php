@@ -1,30 +1,12 @@
 <?php
+/**
+ * @method contactcard_ListFunctionsService getInstance()
+ */
 class contactcard_ListFunctionsService extends change_BaseService implements list_ListItemsService
 {
 	/**
-	 * @var contactcard_ListFunctionsService
+	 * @return list_Item[]
 	 */
-	private static $instance;
-
-
-	/**
-	 * @return contactcard_ListFunctionsService
-	 */
-
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
-
-
-	/**
-	 * @return array<list_Item>
-	 */
-	
 	public function getItems()
 	{
 		$contactcardInstance = contactcard_ContactService::getInstance();

@@ -9,7 +9,7 @@
 		<field name="photo" hidehelp="true" />
 		<field name="communicationlanguage" hidehelp="true" />
 		<field name="allowcontact" hidehelp="true" />
-		<field name="contactpage" hidehelp="true" moduleselector="website" allow="hasUrl"  />
+		<field name="contactpage" hidehelp="true" moduleselector="website" allow="hasUrl" />
 		<field name="mails" />
 		<field name="indexingstatus" hidehelp="true" />
 	</section>

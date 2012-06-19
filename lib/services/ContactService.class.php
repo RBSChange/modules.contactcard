@@ -18,12 +18,12 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 	 */
 	public function createQuery()
 	{
-		return $this->pp->createQuery('modules_contactcard/contact');
+		return $this->getPersistentProvider()->createQuery('modules_contactcard/contact');
 	}
 
 	/**
 	 * @param contactcard_persistentdocument_contact $document
-	 * @param Integer $parentNodeId
+	 * @param integer $parentNodeId
 	 * @return void
 	 */
 	protected function preSave($document, $parentNodeId)

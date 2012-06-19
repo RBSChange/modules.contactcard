@@ -5,7 +5,7 @@
 class contactcard_ListCompanynameService extends change_BaseService implements list_ListItemsService
 {
 	/**
-	 * @return array<list_Item>
+	 * @return list_Item[]
 	 */
 	
 	public function getItems()
