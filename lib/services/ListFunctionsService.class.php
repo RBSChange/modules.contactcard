@@ -1,5 +1,5 @@
 <?php
-class contactcard_ListFunctionsService extends BaseService implements list_ListItemsService
+class contactcard_ListFunctionsService extends change_BaseService implements list_ListItemsService
 {
 	/**
 	 * @var contactcard_ListFunctionsService

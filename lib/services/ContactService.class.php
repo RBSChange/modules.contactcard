@@ -1,27 +1,9 @@
 <?php
 /**
- * @date Thu, 14 Jun 2007 15:53:06 +0200
- * @author intessit
+ * @method contactcard_ContactService getInstance()
  */
 class contactcard_ContactService extends f_persistentdocument_DocumentService
 {
-	/**
-	 * @var contactcard_ContactService
-	 */
-	private static $instance;
-
-	/**
-	 * @return contactcard_ContactService
-	 */
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
-
 	/**
 	 * @return contactcard_persistentdocument_contact
 	 */

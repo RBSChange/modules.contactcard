@@ -1,27 +1,10 @@
 <?php
 /**
- * @package modules.contactcard.lib.services
+ * @package modules.contactcard
+ * @method contactcard_ModuleService getInstance()
  */
 class contactcard_ModuleService extends ModuleBaseService
 {
-	/**
-	 * Singleton
-	 * @var contactcard_ModuleService
-	 */
-	private static $instance = null;
-
-	/**
-	 * @return contactcard_ModuleService
-	 */
-	public static function getInstance()
-	{
-		if (is_null(self::$instance))
-		{
-			self::$instance = self::getServiceClassInstance(get_class());
-		}
-		return self::$instance;
-	}
-	
 	/**
 	 * @deprecated (will be removed in 4.0) use $notification->registerCallback() and $notification->sendToContact()
 	 */
