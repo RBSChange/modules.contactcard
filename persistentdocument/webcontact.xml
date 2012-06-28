@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/4.0.xsd" model-version="1.0" icon="contactcard" use-publication-dates="false" backoffice-indexable="false" has-url="false">
+<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/schema/persistentdocument-4.0.xsd" model-version="1.0" icon="contactcard" use-publication-dates="false" backoffice-indexable="false" has-url="false">
 	<properties>
 		<property name="address1" type="LongString" />
 		<property name="address2" type="LongString" />
 		<property name="zipcode" type="String" />
 		<property name="city" type="String" />
 		<property name="country" type="String" />
-		<property name="title" type="modules_list/item" min-occurs="0" max-occurs="1" from-list="modules_contactcard/title" />
+		<property name="title" type="Document" min-occurs="0" from-list="modules_contactcard/title" document-type="modules_list/item" />
 		<property name="lastname" type="String" />
 		<property name="firstname" type="String" />
 		<property name="phone" type="String" localized="true" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/4.0.xsd" model-version="1.0" icon="contactcard" indexable="true" use-publication-dates="false" backoffice-indexable="true">
+<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/schema/persistentdocument-4.0.xsd" model-version="1.0" icon="contactcard" indexable="true" use-publication-dates="false" backoffice-indexable="true">
 	<properties>
 		<property name="name" type="String" localized="true" indexed="description" />
 		<property name="address1" type="LongString" />
@@ -8,11 +8,11 @@
 		<property name="city" type="String" />
 		<property name="country" type="String" />
 		<property name="communicationlanguage" type="String" min-occurs="1" from-list="modules_contactcard/languages" default-value="fr" indexed="none" />
-		<property name="title" type="modules_list/item" from-list="modules_contactcard/title" />
+		<property name="title" type="Document" from-list="modules_contactcard/title" document-type="modules_list/item" />
 		<property name="lastname" type="String" />
 		<property name="firstname" type="String" />
 		<property name="function" type="String" localized="true" />
-		<property name="photo" type="modules_media/media" />
+		<property name="photo" type="Document" document-type="modules_media/media" />
 		<property name="phone" type="String" localized="true" indexed="none" />
 		<property name="post" type="String" localized="true" indexed="none" />
 		<property name="fax" type="String" localized="true" indexed="none" />
@@ -24,6 +24,6 @@
 			<constraint name="url" />
 		</property>
 		<property name="allowcontact" type="Boolean" />
-		<property name="contactpage" type="modules_generic/Document" />
+		<property name="contactpage" type="Document" document-type="modules_generic/document" />
 	</properties>
 </document>
