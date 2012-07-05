@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.contactcard.bo.general" lcid="de_DE">
-  <key id="module-name">Kontaktkarten</key>
-  <key id="tree-root-name">Kontaktkarten</key>
-  <key id="system-folder-name">Kontaktkarten</key>
-  <key id="contactnotpublished">Dieser Kontakt ist nicht in Veröffentlichtstatus, er wird nicht online angezeigt werden</key>
-  <key id="contactformpagenotpublished">Dieser Link leitet zu einer nicht veröffentlichten Seite, er wird nicht online angezeigt werden</key>
-  <key id="defaultlabel">Kontaktkarte</key>
+	<key id="module-name">Kontaktkarten</key>
+	<key id="tree-root-name">Kontaktkarten</key>
+	<key id="system-folder-name">Kontaktkarten</key>
+	<key id="contactnotpublished">Dieser Kontakt ist nicht in Veröffentlichtstatus, er wird nicht online angezeigt werden</key>
+	<key id="contactformpagenotpublished">Dieser Link leitet zu einer nicht veröffentlichten Seite, er wird nicht online angezeigt werden</key>
+	<key id="defaultlabel">Kontaktkarte</key>
 </i18n>

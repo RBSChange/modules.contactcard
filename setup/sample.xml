@@ -3,28 +3,21 @@
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/contactcard/persistentdocument/import/contactcard_binding.xml" />
-		
 	<rootfolder module="media">
 		<folder label="Exemple Fiches contacts">
 			<media path="modules/contactcard/setup/sample/photo.png" label="Photo non disponible" id="photo" />
 		</folder>
 	</rootfolder>
-
 	<website byTag="default_modules_website_default-website">
 		<topic byLabel="Outils">
-			<page label="Contact" navigationVisibility="hidden" indexingstatus="false"
-				byTag="contextual_website_website_modules_contactcard_contact">
+			<page label="Contact" navigationVisibility="hidden" indexingstatus="false" byTag="contextual_website_website_modules_contactcard_contact">
 				<changecontent for="content-block">
 					<changeblock type="modules_contactcard_contact" />
 				</changecontent>
 			</page>
-
-			<page label="Envoyer un mail à ce contact" navigationVisibility="hidden" indexingstatus="false"
-				byTag="contextual_website_website_modules_contactcard_page-contact">
+			<page label="Envoyer un mail à ce contact" navigationVisibility="hidden" indexingstatus="false" byTag="contextual_website_website_modules_contactcard_page-contact">
 				<changecontent for="content-block">
-					<changeblock type="richtext">
-						<![CDATA[<h2 class="heading-two">Mettre ici le formulaire de contact</h2>]]>
-					</changeblock>
+					<changeblock type="richtext"><![CDATA[<h2 class="heading-two">Mettre ici le formulaire de contact</h2>]]></changeblock>
 				</changecontent>
 			</page>
 		</topic>
@@ -36,27 +29,9 @@
 			</page>
 		</topic>
 	</website>
-	
 	<rootfolder module="contactcard">
 		<folder byLabel="Exemples">
-			<contact byName="RBS"
-				 titlestr="M."
-				 firstname="RBS"
-				 lastname="Change"
-				 function="CMS E-Commerce"
-				 photo-refid="photo"
-				 post=""
-				 mails="noreply@rbschange.fr"
-				 
-				 communicationlanguage="fr"
-				 phone="+33 (0)3 88 764 764"
-				 fax="+33 (0)3 88 764 765"
-				 address1="Aéroparc 1"
-				 address2="11 rue Icare"
-				 zipcode="67836"
-				 city="Strasbourg – Entzheim"
-				 country="france"
-				 indexingstatus="false" />
+			<contact byName="RBS" titlestr="M." firstname="RBS" lastname="Change" function="CMS E-Commerce" photo-refid="photo" post="" mails="noreply@rbschange.fr" communicationlanguage="fr" phone="+33 (0)3 88 764 764" fax="+33 (0)3 88 764 765" address1="Aéroparc 1" address2="11 rue Icare" zipcode="67836" city="Strasbourg – Entzheim" country="france" indexingstatus="false" />
 		</folder>
 	</rootfolder>
 </script>

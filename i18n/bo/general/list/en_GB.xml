@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.contactcard.bo.general.list" lcid="en_GB">
-  <key id="label">title for the "Contact cards" module</key>
-  <key id="desc">title for the "Contact" module</key>
-  <key id="mister">Mr.</key>
-  <key id="miss">Miss</key>
-  <key id="madam">Mrs.</key>
+	<key id="label">title for the "Contact cards" module</key>
+	<key id="desc">title for the "Contact" module</key>
+	<key id="mister">Mr.</key>
+	<key id="miss">Miss</key>
+	<key id="madam">Mrs.</key>
 </i18n>

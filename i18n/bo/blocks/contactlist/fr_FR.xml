@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.contactcard.bo.blocks.contactlist" lcid="fr_FR">
-  <key id="title">Trombinoscope</key>
-  <key id="title-help">Trombinoscope</key>
-  <key id="showphoto">Afficher la photo</key>
-  <key id="showphoto-help">Afficher la photo</key>
-  <key id="showcompanyinfos">Afficher les informations sur la société</key>
-  <key id="showcompanyinfos-help">Afficher les informations sur la société (Nom de la société et le poste qu'occupe le contact)</key>
-  <key id="showtelephonenumber">Afficher les coordonnées téléphoniques</key>
-  <key id="showtelephonenumber-help">Afficher les coordonnées téléphoniques</key>
-  <key id="showaddress">Afficher l'adresse</key>
-  <key id="showaddress-help">Afficher l'adresse</key>
-  <key id="showcontactpagelink">Afficher le lien vers le formulaire de contact</key>
-  <key id="showcontactpagelink-help">Afficher le lien vers le formulaire de contact</key>
-  <key id="showlinktodetail">Afficher le lien vers le détail</key>
-  <key id="showlinktodetail-help">Afficher le lien vers la page de détail du contact</key>
-  <key id="showfilters">Afficher les filtres</key>
-  <key id="showfilters-help">Afficher les filtres</key>
-  <key id="showcompanynamesfilter">Afficher le filtre par société</key>
-  <key id="showcompanynamesfilter-help">Afficher le filtre par société</key>
-  <key id="showfunctionsfilter">Afficher le filtre par fonction</key>
-  <key id="showfunctionsfilter-help">Afficher le filtre par fonction</key>
-  <key id="itemperpage">Contact par page</key>
-  <key id="itemperpage-help">Nombre de contact par page</key>
+	<key id="title">Trombinoscope</key>
+	<key id="title-help">Trombinoscope</key>
+	<key id="showphoto">Afficher la photo</key>
+	<key id="showphoto-help">Afficher la photo</key>
+	<key id="showcompanyinfos">Afficher les informations sur la société</key>
+	<key id="showcompanyinfos-help">Afficher les informations sur la société (Nom de la société et le poste qu'occupe le contact)</key>
+	<key id="showtelephonenumber">Afficher les coordonnées téléphoniques</key>
+	<key id="showtelephonenumber-help">Afficher les coordonnées téléphoniques</key>
+	<key id="showaddress">Afficher l'adresse</key>
+	<key id="showaddress-help">Afficher l'adresse</key>
+	<key id="showcontactpagelink">Afficher le lien vers le formulaire de contact</key>
+	<key id="showcontactpagelink-help">Afficher le lien vers le formulaire de contact</key>
+	<key id="showlinktodetail">Afficher le lien vers le détail</key>
+	<key id="showlinktodetail-help">Afficher le lien vers la page de détail du contact</key>
+	<key id="showfilters">Afficher les filtres</key>
+	<key id="showfilters-help">Afficher les filtres</key>
+	<key id="showcompanynamesfilter">Afficher le filtre par société</key>
+	<key id="showcompanynamesfilter-help">Afficher le filtre par société</key>
+	<key id="showfunctionsfilter">Afficher le filtre par fonction</key>
+	<key id="showfunctionsfilter-help">Afficher le filtre par fonction</key>
+	<key id="itemperpage">Contact par page</key>
+	<key id="itemperpage-help">Nombre de contact par page</key>
 </i18n>

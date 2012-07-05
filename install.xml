@@ -1,6 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <install type="modules" name="contactcard" version="4.0.0">
-  <package type="modules" name="generic"/>
-  <package type="modules" name="website"/>
-  <package type="modules" name="list"/>
 </install>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.contactcard.document.contact" lcid="en_GB">
 	<key id="label-help">Organisation, company, or department name.</key>
 	<key id="name">company</key>

@@ -3,8 +3,8 @@
 	<action name="createContact">
 		<parameter name="listWidget" />
 		<body><![CDATA[
-    		this.createDocumentEditor('modules_contactcard_contact', listWidget.getSelectedItems()[0].id);
-    	]]></body>
+			this.createDocumentEditor('modules_contactcard_contact', listWidget.getSelectedItems()[0].id);
+		]]></body>
 	</action>
 	<action name="createFolder">
 		<parameter name="listWidget" />

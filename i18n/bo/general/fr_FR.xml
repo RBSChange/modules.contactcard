@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.contactcard.bo.general" lcid="fr_FR">
-  <key id="module-name">fiches contact</key>
-  <key id="tree-root-name">fiches contact</key>
-  <key id="system-folder-name">fiches contact</key>
-  <key id="contactnotpublished">ce contact n'est pas en statut publié, il ne sera pas affiché sur le site</key>
-  <key id="contactformpagenotpublished">ce lien pointe vers une page qui n'est pas publiée, il ne sera pas affiché sur le site</key>
-  <key id="defaultlabel">fiche contact</key>
+	<key id="module-name">fiches contact</key>
+	<key id="tree-root-name">fiches contact</key>
+	<key id="system-folder-name">fiches contact</key>
+	<key id="contactnotpublished">ce contact n'est pas en statut publié, il ne sera pas affiché sur le site</key>
+	<key id="contactformpagenotpublished">ce lien pointe vers une page qui n'est pas publiée, il ne sera pas affiché sur le site</key>
+	<key id="defaultlabel">fiche contact</key>
 </i18n>

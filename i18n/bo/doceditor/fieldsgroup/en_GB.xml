@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.contactcard.bo.doceditor.fieldsgroup" lcid="en_GB">
 	<key id="postal">postal address</key>
 	<key id="phone">phone number/website</key>

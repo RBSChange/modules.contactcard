@@ -6,12 +6,12 @@
 		<property name="zipcode" type="String" />
 		<property name="city" type="String" />
 		<property name="country" type="String" />
-		<property name="title" type="Document" min-occurs="0" from-list="modules_contactcard/title" document-type="modules_list/item" />
+		<property name="title" type="Document" from-list="modules_contactcard/title" document-type="modules_list/item" />
 		<property name="lastname" type="String" />
 		<property name="firstname" type="String" />
 		<property name="phone" type="String" localized="true" />
 		<property name="fax" type="String" localized="true" />
-		<property name="mails" type="LongString" min-occurs="1" max-occurs="1">
+		<property name="mails" type="LongString" required="true">
 			<constraint name="emails" />
 		</property>
 	</properties>

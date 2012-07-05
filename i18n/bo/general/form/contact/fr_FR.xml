@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.contactcard.bo.general.form.contact" lcid="fr_FR">
-  <key id="label">envoyer un e-mail au contact</key>
-  <key id="confirm-message">votre message a été envoyé</key>
+	<key id="label">envoyer un e-mail au contact</key>
+	<key id="confirm-message">votre message a été envoyé</key>
 </i18n>

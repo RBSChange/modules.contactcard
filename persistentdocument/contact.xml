@@ -7,7 +7,7 @@
 		<property name="zipcode" type="String" />
 		<property name="city" type="String" />
 		<property name="country" type="String" />
-		<property name="communicationlanguage" type="String" min-occurs="1" from-list="modules_contactcard/languages" default-value="fr" indexed="none" />
+		<property name="communicationlanguage" type="String" from-list="modules_contactcard/languages" default-value="fr" indexed="none" required="true" />
 		<property name="title" type="Document" from-list="modules_contactcard/title" document-type="modules_list/item" />
 		<property name="lastname" type="String" />
 		<property name="firstname" type="String" />
@@ -16,7 +16,7 @@
 		<property name="phone" type="String" localized="true" indexed="none" />
 		<property name="post" type="String" localized="true" indexed="none" />
 		<property name="fax" type="String" localized="true" indexed="none" />
-		<property name="mails" type="LongString" min-occurs="1" indexed="none">
+		<property name="mails" type="LongString" indexed="none" required="true">
 			<constraint name="emails" />
 		</property>
 		<property name="indexingstatus" type="Boolean" default-value="true" />

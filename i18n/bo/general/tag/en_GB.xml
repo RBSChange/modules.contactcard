@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.contactcard.bo.general.tag" lcid="en_GB">
-  <key id="detail-page">detail page</key>
-  <key id="contact-page">contact form page</key>
+	<key id="detail-page">detail page</key>
+	<key id="contact-page">contact form page</key>
 </i18n>

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.contactcard.document.webcontact" lcid="fr_FR">
-  <key id="document-name">fiche contact</key>
-  <key id="label">libellé</key>
+	<key id="document-name">fiche contact</key>
+	<key id="label">libellé</key>
 </i18n>

@@ -47,7 +47,7 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 		}
 		if (f_util_StringUtils::isEmpty($label))
 		{
-			$label = f_Locale::translate("&modules.contactcard.bo.general.Defaultlabel;");
+			$label = LocaleService::getInstance()->trans("m.contactcard.bo.general.defaultlabel", array('ucf'));
 		}
 		$document->setLabel($label);
 	}
@@ -141,7 +141,7 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 		{
 			try
 			{
-				$content = f_Locale::translate('&modules.contactcard.frontoffice.Contactnamed;', array("name" => $attributes['label']));
+				$content = LocaleService::getInstance()->trans('m.contactcard.frontoffice.contactnamed', array('ucf'), array("name" => $attributes['label']));
 				$attributes['htmllink'] = '<a class="link" href="#" rel="cmpref:' . $document->getId() . '" lang="' . $document->getLang() . '">' . htmlspecialchars($content, ENT_NOQUOTES, 'UTF-8') . '</a>';
 			}
 			catch (Exception $e)

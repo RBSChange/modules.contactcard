@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.contactcard.bo.blocks.contactlist" lcid="en_GB">
-  <key id="title">Photo collection</key>
-  <key id="title-help">Photo collection</key>
-  <key id="showphoto">Display photo</key>
-  <key id="showphoto-help">Display photo</key>
-  <key id="showcompanyinfos">Display company information</key>
-  <key id="showcompanyinfos-help">Displays company information (Company name and contact's function).</key>
-  <key id="showtelephonenumber">Display telephone number</key>
-  <key id="showtelephonenumber-help">Display telephone number</key>
-  <key id="showaddress">Display address</key>
-  <key id="showaddress-help">Display address</key>
-  <key id="showcontactpagelink">Display link to contact page</key>
-  <key id="showcontactpagelink-help">Display link to contact page</key>
-  <key id="showlinktodetail">Display link to details page</key>
-  <key id="showlinktodetail-help">Display link to the page with contact details</key>
-  <key id="showfilters">display filters</key>
-  <key id="showfilters-help">display filters</key>
-  <key id="showcompanynamesfilter">display company filter</key>
-  <key id="showcompanynamesfilter-help">display company filter</key>
-  <key id="showfunctionsfilter">display function filter</key>
-  <key id="showfunctionsfilter-help">display function filter</key>
-  <key id="itemperpage">Contacts per page</key>
-  <key id="itemperpage-help">Number of contacts per page.</key>
+	<key id="title">Photo collection</key>
+	<key id="title-help">Photo collection</key>
+	<key id="showphoto">Display photo</key>
+	<key id="showphoto-help">Display photo</key>
+	<key id="showcompanyinfos">Display company information</key>
+	<key id="showcompanyinfos-help">Displays company information (Company name and contact's function).</key>
+	<key id="showtelephonenumber">Display telephone number</key>
+	<key id="showtelephonenumber-help">Display telephone number</key>
+	<key id="showaddress">Display address</key>
+	<key id="showaddress-help">Display address</key>
+	<key id="showcontactpagelink">Display link to contact page</key>
+	<key id="showcontactpagelink-help">Display link to contact page</key>
+	<key id="showlinktodetail">Display link to details page</key>
+	<key id="showlinktodetail-help">Display link to the page with contact details</key>
+	<key id="showfilters">display filters</key>
+	<key id="showfilters-help">display filters</key>
+	<key id="showcompanynamesfilter">display company filter</key>
+	<key id="showcompanynamesfilter-help">display company filter</key>
+	<key id="showfunctionsfilter">display function filter</key>
+	<key id="showfunctionsfilter-help">display function filter</key>
+	<key id="itemperpage">Contacts per page</key>
+	<key id="itemperpage-help">Number of contacts per page.</key>
 </i18n>

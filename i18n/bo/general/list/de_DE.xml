@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.contactcard.bo.general.list" lcid="de_DE">
-  <key id="label">Anreden für Kontaktkartenmodul</key>
-  <key id="desc">Anreden für Kontaktmodul</key>
-  <key id="mister">Herr</key>
-  <key id="miss">Fräulein</key>
-  <key id="madam">Frau</key>
+	<key id="label">Anreden für Kontaktkartenmodul</key>
+	<key id="desc">Anreden für Kontaktmodul</key>
+	<key id="mister">Herr</key>
+	<key id="miss">Fräulein</key>
+	<key id="madam">Frau</key>
 </i18n>

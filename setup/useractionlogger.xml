@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-  <binding fileName="modules/useractionlogger/persistentdocument/import/useractionlogger_binding.xml"/>
-  <actiondef modulename="contactcard" actionname="update.contact" label="modules.contactcard.bo.useractionlogger.update-contact"/>
-  <actiondef modulename="contactcard" actionname="insert.contact" label="modules.contactcard.bo.useractionlogger.insert-contact"/>
-  <actiondef modulename="contactcard" actionname="activate.contact" label="modules.contactcard.bo.useractionlogger.activate-contact"/>
+	<binding fileName="modules/useractionlogger/persistentdocument/import/useractionlogger_binding.xml" />
+	<actiondef modulename="contactcard" actionname="update.contact" label="modules.contactcard.bo.useractionlogger.update-contact" />
+	<actiondef modulename="contactcard" actionname="insert.contact" label="modules.contactcard.bo.useractionlogger.insert-contact" />
+	<actiondef modulename="contactcard" actionname="activate.contact" label="modules.contactcard.bo.useractionlogger.activate-contact" />
 </script>

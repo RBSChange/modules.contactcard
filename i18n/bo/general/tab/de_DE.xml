@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.contactcard.bo.general.tab" lcid="de_DE">
-  <key id="general">Haupteigenschaften</key>
-  <key id="address">Adresse</key>
-  <key id="indexing">Indexierung</key>
+	<key id="general">Haupteigenschaften</key>
+	<key id="address">Adresse</key>
+	<key id="indexing">Indexierung</key>
 </i18n>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.contactcard.bo.useractionlogger" lcid="fr_FR">
-  <key id="update-contact">update.contact {lang} {documentlabel}</key>
-  <key id="log-update-contact">log-update-contact</key>
-  <key id="insert-contact">insert.contact {lang} {documentlabel}</key>
-  <key id="log-insert-contact">log-insert-contact</key>
-  <key id="activate-contact">activate.contact {lang} {documentlabel}</key>
-  <key id="log-activate-contact">log-activate-contact</key>
+	<key id="update-contact">update.contact {lang} {documentlabel}</key>
+	<key id="log-update-contact">log-update-contact</key>
+	<key id="insert-contact">insert.contact {lang} {documentlabel}</key>
+	<key id="log-insert-contact">log-insert-contact</key>
+	<key id="activate-contact">activate.contact {lang} {documentlabel}</key>
+	<key id="log-activate-contact">log-activate-contact</key>
 </i18n>
