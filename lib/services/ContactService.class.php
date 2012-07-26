@@ -20,37 +20,6 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 	{
 		return $this->getPersistentProvider()->createQuery('modules_contactcard/contact');
 	}
-
-	/**
-	 * @param contactcard_persistentdocument_contact $document
-	 * @param integer $parentNodeId
-	 * @return void
-	 */
-	protected function preSave($document, $parentNodeId)
-	{
-		$label = "";
-		if ($document->getFirstname() !== null)
-		{
-			$label .= $document->getFirstname()." ";
-		}
-		if ($document->getLastname() !== null)
-		{
-			$label .= $document->getLastName()." ";
-		}
-		if ($document->getName() !== null)
-		{
-			if (!f_util_StringUtils::isEmpty($label))
-			{
-				$label .= "- ";
-			}
-			$label .= $document->getName();
-		}
-		if (f_util_StringUtils::isEmpty($label))
-		{
-			$label = LocaleService::getInstance()->trans("m.contactcard.bo.general.defaultlabel", array('ucf'));
-		}
-		$document->setLabel($label);
-	}
 	
 	/**
 	 * @param contactcard_persistentdocument_contact $document
@@ -229,16 +198,48 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 	 * @param contactcard_persistentdocument_contact $document
 	 * @return string
 	 */
+	protected function constructLabel($document)
+	{
+		$label = '';
+		if ($document->getFirstname() !== null)
+		{
+			$label .= $document->getFirstname() . ' ';
+		}
+		if ($document->getLastname() !== null)
+		{
+			$label .= $document->getLastName() . ' ';
+		}
+		if ($document->getName() !== null)
+		{
+			if (!f_util_StringUtils::isEmpty($label))
+			{
+				$label .= '- ';
+			}
+			$label .= $document->getName();
+		}
+		if (f_util_StringUtils::isEmpty($label))
+		{
+			$label = LocaleService::getInstance()->transFO('m.contactcard.bo.general.defaultlabel');
+		}
+		return $label;
+	}
+	
+	/**
+	 * @param contactcard_persistentdocument_contact $document
+	 * @return string
+	 */
+	public function getNavigationLabel($document)
+	{
+		return $this->constructLabel($document);
+	}
+	
+	/**
+	 * @param contactcard_persistentdocument_contact $document
+	 * @return string
+	 */
 	public function getTreeNodeLabel($document)
 	{
-		if ($document->getLastname() === null)
-		{
-			return $document->getName();
-		}
-		else
-		{
-			return $document->getLastname() . ' ' . $document->getFirstname();
-		}
+		return $this->constructLabel($document);
 	}
 	
 	/**

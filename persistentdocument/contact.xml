@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/schema/persistentdocument-4.0.xsd" model-version="1.0" icon="contactcard" indexable="true" use-publication-dates="false" backoffice-indexable="true">
 	<properties>
+		<!-- Warning: label property won't contain relevant data, use getTreeNodeLabel (for BO) and getNavigationLabel (for FO) instead -->
+		<property name="label" default-value="m.contactcard.bo.general.defaultlabel" />
 		<property name="name" type="String" localized="true" indexed="description" />
 		<property name="address1" type="LongString" />
 		<property name="address2" type="LongString" />
