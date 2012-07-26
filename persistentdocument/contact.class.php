@@ -6,8 +6,6 @@
 class contactcard_persistentdocument_contact extends contactcard_persistentdocument_contactbase implements indexer_IndexableDocument, form_FormReceiver
 {
 	/**
-	 * Get the indexable document
-	 *
 	 * @return indexer_IndexedDocument
 	 */
 	public function getIndexedDocument()
@@ -20,7 +18,7 @@ class contactcard_persistentdocument_contact extends contactcard_persistentdocum
 		$indexedDoc = new indexer_IndexedDocument();
 		$indexedDoc->setId($this->getId());
 		$indexedDoc->setDocumentModel('modules_contactcard/contact');
-		$indexedDoc->setLabel($this->getLabel());
+		$indexedDoc->setLabel($this->getNavigationLabel());
 		$indexedDoc->setLang(RequestContext::getInstance()->getLang());
 		$indexedDoc->setText($this->getAddress1() . " " . $this->getAddress2() . " " . $this->getZipcode() . " " . $this->getCity() . " " . $this->getCountry() . " " . $this->getLastname() . " " . $this->getFirstname() . " " . $this->getFunction() . " " . $this->getPhone() . " " . $this->getPost() . " " . $this->getFax());
 		return $indexedDoc;

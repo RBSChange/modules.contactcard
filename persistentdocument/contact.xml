@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/1.0.xsd" model-version="1.0" icon="contactcard" indexable="true" publish-on-day-change="false" table-name-oci="m_card_doc_contact">
-  <properties>
-    <add name="name" type="String" localized="true"/>
-    <add name="address1" type="LongString"/>
-    <add name="address2" type="LongString"/>
-    <add name="zipcode" type="String"/>
-    <add name="city" type="String"/>
-    <add name="country" type="String"/>
-    <add name="communicationlanguage" type="String" min-occurs="1" max-occurs="1" from-list="modules_contactcard/languages" default-value="fr"/>
-    <add name="title" type="modules_list/item" min-occurs="0" max-occurs="1" from-list="modules_contactcard/title"/>
-    <add name="lastname" type="String"/>
-    <add name="firstname" type="String"/>
-    <add name="function" type="String" localized="true"/>
-    <add name="photo" type="modules_media/media"/>
-    <add name="phone" type="String" localized="true"/>
-    <add name="post" type="String" localized="true"/>
-    <add name="fax" type="String" localized="true"/>
-    <add name="mails" type="LongString" min-occurs="1" max-occurs="1">
-      <constraints>emails:true</constraints>
-    </add>
-    <add name="indexingstatus" type="Boolean" default-value="true"/>
-    <add name="websiteurl" type="String">
-    	<constraints>url:true</constraints>
-    </add>
-    <add name="allowcontact" type="Boolean"/>
-    <add name="contactpage" type="modules_generic/Document"/>
-  </properties>
+<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/1.0.xsd"
+	model-version="1.0" icon="contactcard" indexable="true" publish-on-day-change="false" table-name-oci="m_card_doc_contact">
+	<properties>
+		<!-- Warning: label property won't contain relevant data, use getTreeNodeLabel (for BO) and getNavigationLabel (for FO) instead -->
+		<add name="label" default-value="contact-card" />
+		<add name="name" type="String" localized="true" />
+		<add name="address1" type="LongString" />
+		<add name="address2" type="LongString" />
+		<add name="zipcode" type="String" />
+		<add name="city" type="String" />
+		<add name="country" type="String" />
+		<add name="communicationlanguage" type="String" min-occurs="1" max-occurs="1" from-list="modules_contactcard/languages" default-value="fr" />
+		<add name="title" type="modules_list/item" min-occurs="0" max-occurs="1" from-list="modules_contactcard/title" />
+		<add name="lastname" type="String" />
+		<add name="firstname" type="String" />
+		<add name="function" type="String" localized="true" />
+		<add name="photo" type="modules_media/media" />
+		<add name="phone" type="String" localized="true" />
+		<add name="post" type="String" localized="true" />
+		<add name="fax" type="String" localized="true" />
+		<add name="mails" type="LongString" min-occurs="1" max-occurs="1">
+			<constraints>emails:true</constraints>
+		</add>
+		<add name="indexingstatus" type="Boolean" default-value="true" />
+		<add name="websiteurl" type="String">
+			<constraints>url:true</constraints>
+		</add>
+		<add name="allowcontact" type="Boolean" />
+		<add name="contactpage" type="modules_generic/Document" />
+	</properties>
 </document>

@@ -6,4 +6,6 @@
   <key id="log-insert-contact">log-insert-contact</key>
   <key id="activate-contact">activate.contact {lang} {documentlabel}</key>
   <key id="log-activate-contact">log-activate-contact</key>
+  <key id="updatetranslation-contact">updatetranslation.contact {lang} {documentlabel}</key>
+  <key id="log-updatetranslation-contact">log updatetranslation contact</key>
 </i18n>
