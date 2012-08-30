@@ -219,7 +219,7 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 		}
 		if (f_util_StringUtils::isEmpty($label))
 		{
-			$label = LocaleService::getInstance()->transFO('m.contactcard.bo.general.defaultlabel');
+			$label = LocaleService::getInstance()->trans('m.contactcard.bo.general.defaultlabel');
 		}
 		return $label;
 	}

@@ -5,5 +5,4 @@
  */
 class contactcard_ModuleService extends ModuleBaseService
 {
-
 }
