@@ -13,4 +13,14 @@
 			<fieldtext fieldName="message" label="Message" required="true" multiline="true" cols="50" rows="10" maxlength="10000" validators="blank:false;maxSize:10000" />
 		</form>
 	</systemfolder>
+	<systemfolder module="list" relatedmodule="contactcard">
+		<editablelist listid="modules_contactcard/title" order="false" description="Civilités pour le module contactcard" label="Civilités pour le module contactcard">
+			<item byLabel="M." />
+			<item byLabel="Mlle" />
+			<item byLabel="Mme" />
+		</editablelist>
+		<dynamiclist listid="modules_contactcard/languages" label="Liste des langues disponibles" description="Langues disponible pour la réception des messages de notification" />
+		<dynamiclist listid="modules_contactcard/companyname" label="Liste des sociétés disponible" description="Sociétés disponible dans les fiches contact pour faire le tri par sociétés" />
+		<dynamiclist listid="modules_contactcard/functions" label="Liste des fonctions disponible" description="Fonctions des contacts du module fiches contact pour faire le tri par fonctions." />
+	</systemfolder>
 </script>
