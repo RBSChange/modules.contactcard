@@ -15,5 +15,5 @@
 			<constraint name="emails" />
 		</property>
 	</properties>
-	<statuses default="PUBLICATED" />
+	<statuses default="PUBLISHED" />
 </document>
