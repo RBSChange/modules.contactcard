@@ -5,4 +5,5 @@
   <actiondef modulename="contactcard" actionname="insert.contact" label="modules.contactcard.bo.useractionlogger.insert-contact"/>
   <actiondef modulename="contactcard" actionname="activate.contact" label="modules.contactcard.bo.useractionlogger.activate-contact"/>
   <actiondef modulename="contactcard" actionname="updatetranslation.contact" label="m.contactcard.bo.useractionlogger.updatetranslation-contact"/>
+  <actiondef modulename="contactcard" actionname="delete.contact" label="m.contactcard.bo.useractionlogger.delete-contact"/>
 </script>

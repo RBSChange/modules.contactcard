@@ -8,4 +8,6 @@
   <key id="log-activate-contact">log-activate-contact</key>
   <key id="updatetranslation-contact">updatetranslation.contact {lang} {documentlabel}</key>
   <key id="log-updatetranslation-contact">log updatetranslation contact</key>
+  <key id="delete-contact">delete.contact {documentlabel} {lang}</key>
+  <key id="log-delete-contact">log delete contact</key>
 </i18n>

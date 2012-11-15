@@ -4,7 +4,6 @@
 	model-version="1.0" icon="contactcard" indexable="true" publish-on-day-change="false" table-name-oci="m_card_doc_contact">
 	<properties>
 		<!-- Warning: label property won't contain relevant data, use getTreeNodeLabel (for BO) and getNavigationLabel (for FO) instead -->
-		<add name="label" default-value="contact-card" />
 		<add name="name" type="String" localized="true" />
 		<add name="address1" type="LongString" />
 		<add name="address2" type="LongString" />

@@ -23,6 +23,19 @@ class contactcard_ContactService extends f_persistentdocument_DocumentService
 	}
 
 	/**
+	 * @param contactcard_persistentdocument_contact $document
+	 * @param Integer $parentNodeId Parent node ID where to save the document (optionnal).
+	 */
+	protected function preSave($document, $parentNodeId)
+	{
+		// Warning: label property won't contain relevant data, use getTreeNodeLabel (for BO) and getNavigationLabel (for FO) instead.
+		if (!$document->getLabel())
+		{
+			$document->setLabel('contact-card');
+		}
+	}
+	
+	/**
 	 * @return contactcard_persistentdocument_contact
 	 */
 	public function getNewDocumentInstance()
